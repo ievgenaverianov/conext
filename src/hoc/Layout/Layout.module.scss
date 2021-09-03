@@ -1,0 +1,60 @@
+.Layout{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: transparent linear-gradient(270deg, #000A00 0%, #081326 100%) 0% 0% no-repeat padding-box;
+  main {
+    display: flex;
+    flex-grow: 1;
+  }
+  .Language {
+    position: fixed;
+    top: 76px;
+    right: 84px;
+    width: 100px;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: normal normal bold 20px/23px Spartan;
+    color: #5A605B;
+    z-index: 100;
+    .white {
+      color: #fff
+    }
+  }
+  .ContextLogo {
+    position: fixed;
+    top: 48px;
+    left: 61px;
+    width: 208px;
+    height: 75px;
+    cursor: pointer
+  }
+  .FbLogo, .IgLogo, .LnLogo {
+    position: fixed;
+    bottom: 45px;
+    left: 52px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+  .FbLogo {
+    left: 52px;
+  }
+  .IgLogo {
+    left: 120px;
+  }
+  .LnLogo {
+    left: 187px;
+  }
+  .PhoneButton {
+    position: fixed;
+    bottom: 60px;
+    right: 75px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer
+  }
+}

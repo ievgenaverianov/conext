@@ -1,0 +1,19 @@
+.Contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  span {
+    font: normal normal normal 14px/21px Spartan;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+  i {
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    cursor: pointer;
+    &:nth-child(3) {
+      margin-left: 29px;
+    }
+  }
+}

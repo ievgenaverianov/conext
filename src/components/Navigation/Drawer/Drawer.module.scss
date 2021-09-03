@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;800;900&display=swap');
+
+.Drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 45px 0 45px;
+  box-sizing: border-box;
+  background: #000A00;
+  font-family: 'Spartan', sans-serif;
+  transform: translateX(0px);
+  transition: all .3s ease-in;
+  z-index: 90;
+  border-left: 1px solid #fff;
+  &>div{
+    width: 100%;
+    height: 74%;
+    margin-top: 20px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 65%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 15px;
+      a {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        //line-height: 71px;
+        text-decoration: none;
+        position: relative;
+        transition: opacity .3s;
+      }
+    }
+  }
+  hr{
+    border: none;
+    color: #00DE81;
+    background-color: #00DE81;
+    height: 1px;
+    margin: 35px 0 44px 0;
+  }
+  span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #017545;
+  }
+  p {
+    max-width: 340px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    opacity: 0.5;
+    margin: 39px 0 41px 0;
+  }
+}
+
+.Drawer.close{
+  transform: translateX(600px);
+}
