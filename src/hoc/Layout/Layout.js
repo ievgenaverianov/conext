@@ -4,7 +4,7 @@ import MenuToggle from "../../components/Navigation/MenuToggle/MenuToggle";
 import Drawer from "../../components/Navigation/Drawer/Drawer";
 import contextLogo from "../../img/context-logo.svg"
 import fbLogo from "../../img/facebook.svg"
-import igLogo from "../../img/ig.svg"
+import igLogo from "../../img/instagram.svg"
 import lnLogo from "../../img/linkedin.svg"
 import phoneButton from "../../img/phone-btn.svg";
 

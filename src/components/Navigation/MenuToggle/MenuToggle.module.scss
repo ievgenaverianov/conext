@@ -13,3 +13,11 @@
 .MenuToggle:hover {
   opacity: .7;
 }
+
+@media screen and (max-width: 1800px) {
+  .MenuToggle {
+    top: 53px;
+    right: 172px;
+    font-size: 23px;
+  }
+}

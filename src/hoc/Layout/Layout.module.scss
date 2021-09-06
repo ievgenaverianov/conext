@@ -8,6 +8,10 @@
     display: flex;
     flex-grow: 1;
   }
+  i {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .Language {
     position: fixed;
     top: 76px;
@@ -20,6 +24,9 @@
     font: normal normal bold 20px/23px Spartan;
     color: #5A605B;
     z-index: 100;
+    span {
+      cursor: pointer;
+    }
     .white {
       color: #fff
     }
@@ -30,15 +37,16 @@
     left: 61px;
     width: 208px;
     height: 75px;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 80;
   }
   .FbLogo, .IgLogo, .LnLogo {
     position: fixed;
     bottom: 45px;
-    left: 52px;
     width: 45px;
     height: 45px;
     cursor: pointer;
+    z-index: 80;
   }
   .FbLogo {
     left: 52px;
@@ -55,6 +63,44 @@
     right: 75px;
     width: 75px;
     height: 75px;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 80;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .Layout{
+    .Language {
+      top: 54px;
+      right: 62px;
+      width: 76px;
+      font: normal normal bold 16px/21px Spartan;
+    }
+    .ContextLogo {
+      top: 36px;
+      left: 44px;
+      width: 160px;
+      height: 60px;
+    }
+    .FbLogo, .IgLogo, .LnLogo {
+      bottom: 33px;
+      width: 35px;
+      height: 35px;
+    }
+    .FbLogo {
+      left: 39px;
+    }
+    .IgLogo {
+      left: 89px;
+    }
+    .LnLogo {
+      left: 140px;
+    }
+    .PhoneButton {
+      bottom: 44px;
+      right: 56px;
+      width: 57px;
+      height: 57px;
+    }
   }
 }

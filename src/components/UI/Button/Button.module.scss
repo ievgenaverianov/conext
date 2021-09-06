@@ -1,11 +1,19 @@
 .Button {
   height: 75px;
   font-size: 22px;
-  line-height: 25px;
+  line-height: 1.136;
   border: 1px solid #FFFFFF;
   border-radius: 71px;
   font-family: 'Spartan', sans-serif;
   color: #fff;
   background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 75%);
   cursor: pointer;
+}
+
+@media screen and (max-width: 1800px) {
+  .Button {
+    height: 56px;
+    font-size: 17px;
+    line-height: 25px;
+  }
 }
