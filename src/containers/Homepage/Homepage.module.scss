@@ -1,111 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;800;900&display=swap');
 
 .Homepage {
+  position: relative;
   width: 100%;
   height: 100%;
   font-family: 'Spartan', sans-serif;
   color: #fff;
-  padding: 0 120px;
-  margin-top: -41px;
-  h1 {
-    position: relative;
-    width: 55%;
-    max-width: 840px;
-    font-size: 135px;
-    line-height: 1.378;
-    font-weight: 700;
-    margin-left: 6px;
-    text-align: right;
-    div {
-      position: absolute;
-      bottom: 9px;
-      right: -3px;
-      width: 465px;
-      height: 180px;
-      background: transparent radial-gradient(closest-side at 50% 50%, #FFFFFF00 0%, #FFFFFF04 29%, #FFFFFF0F 56%, #FFFFFF22 82%, #FFFFFF33 100%) 0% 0% no-repeat padding-box;
-      border-radius: 32px;
-      opacity: 0.5;
-    }
-  }
-  b{
-    margin: 0 33px 0 36px;
-    font-weight: 700;
-  }
-  p{
-    width: 755px;
-    font-size: 24px;
-    line-height: 1.583;
-    font-weight: 500;
-    opacity: .35;
-    margin-top: -45px;
-  }
-  img {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  button {
-    width: 210px;
-    margin-top: 33px;
-  }
-}
-
-@media screen and (max-width: 1800px) {
-  .Homepage {
-    padding: 0 90px;
-    margin-top: -31px;
-    h1 {
-      font-size: 101px;
-      max-width: 627px;
-      div {
-        bottom: 5px;
-        right: -5px;
-        width: 350px;
-        height: 136px;
-        border-radius: 24px;
-      }
-    }
-    b{
-      margin: 0 22px 0 28px;
-    }
-    p{
-      width: 630px;
-      font-size: 18px;
-      margin-top: -30px;
-    }
-    img {
-      max-height: 800px;
-    }
-    button {
-      width: 160px;
-      margin-top: 24px;
-    }
-  }
-}
-
-@media screen and (max-width: 1439px) {
-  .Homepage {
-    padding: 0 75px;
-    margin-top: -2px;
-    h1 {
-      font-size: 90px;
-      max-width: 565px;
-      div {
-        //bottom: 5px;
-        //right: -5px;
-        width: 312px;
-        height: 120px;
-        border-radius: 22px;
-      }
-    }
-    p{
-      width: 510px;
-      font-size: 16px;
-    }
-    button {
-      width: 150px;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

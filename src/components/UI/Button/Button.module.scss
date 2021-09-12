@@ -1,6 +1,7 @@
 .Button {
   height: 75px;
   font-size: 22px;
+  display: inline-block;
   line-height: 1.136;
   border: 1px solid #FFFFFF;
   border-radius: 71px;
@@ -14,6 +15,12 @@
   .Button {
     height: 56px;
     font-size: 17px;
-    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .Button {
+    height: 50px;
+    font-size: 14px;
   }
 }
