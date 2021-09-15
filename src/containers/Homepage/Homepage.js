@@ -5,6 +5,7 @@ import homepagePicTwo from "../../img/homepage-pic-2.png"
 import homepagePicFour from "../../img/homepage-pic-4.png"
 import homepagePicFive from "../../img/homepage-pic-5.png"
 import HomepageItem from "./HomepageItem/HomepageItem";
+import NavigationDots from "../../components/UI/NavigationDots/NavigationDots";
 
 class Homepage extends Component {
 
@@ -29,7 +30,7 @@ class Homepage extends Component {
             {
                 id: 3,
                 title: 'Nos réalisations',
-                // isSliderShown: true
+                isSliderShown: true
             },
             {
                 id: 4,
@@ -74,8 +75,12 @@ class Homepage extends Component {
                 canBeScrolled: !this.state.canBeScrolled
             }), 1000);
         }
+    }
 
-
+    onDotClickHandler = sectionID => {
+        this.setState({
+            activeSection: sectionID
+        })
     }
 
     render() {
@@ -95,9 +100,25 @@ class Homepage extends Component {
                                 isButtonShown={section.isButtonShown}
                                 buttonText={section.buttonText}
                                 isSliderShown={section.isSliderShown}
-                            />)
+                            />
+                        )
                     }
                 )}
+
+                { <ul className={classes.NavigationDots}>
+                    {this.state.sections.map(section => {
+                            return (
+                                <NavigationDots
+                                    key={section.id}
+                                    id={section.id}
+                                    isActive={section.id === this.state.activeSection}
+                                    onDotClick={this.onDotClickHandler}
+                                />
+                            )
+                        }
+                    )}
+                </ul> }
+
             </div>
         )
     }

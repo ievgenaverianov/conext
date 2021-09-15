@@ -110,6 +110,10 @@
       flex-direction: column;
       align-items: center;
       line-height: 1.667em;
+      margin-top: -112px;
+    }
+    h2:after {
+      margin: 0;
     }
   }
 
@@ -157,6 +161,8 @@
     }
   }
 }
+
+
 
 @media screen and (max-width: 1800px) {
   .HomepageItem {

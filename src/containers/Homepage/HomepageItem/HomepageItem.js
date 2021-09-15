@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomepageItem.scss"
 import Button from "../../../components/UI/Button/Button";
-import Slider from "../../../components/UI/Slider/Slider";
+import Carousel from "../../../components/UI/Slider/Slider";
 
 const HomepageItem = props => {
 
@@ -14,7 +14,7 @@ const HomepageItem = props => {
             <p>{props.text}</p>
             { props.image ? <img src={props.image}/> : null }
             { props.isButtonShown ? <Button>{props.buttonText}</Button> : null }
-            { props.isSliderShown ? <Slider /> : null }
+            { props.isSliderShown ? <Carousel /> : null }
         </section>
     )
 }
