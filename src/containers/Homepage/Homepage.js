@@ -165,15 +165,15 @@ class Homepage extends Component {
 
         return (
             <div className={classes.Homepage}
-                 onWheel={this.onScrollEventHandler}
-                 onTouchStart={touchStartEvent => this.handleTouchStart(touchStartEvent)}
-                 onTouchMove={touchMoveEvent => this.handleTouchMove(touchMoveEvent)}
-                 onTouchEnd={() => this.handleTouchEnd()}
+                 onWheel={(window.innerHeight < window.innerWidth) ? this.onScrollEventHandler : null }
+                 onTouchStart={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
+                 onTouchMove={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
+                 onTouchEnd={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? () => this.handleTouchEnd() : null}
 
-                 onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
-                 onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
-                 onMouseUp={() => this.handleMouseUp()}
-                 onMouseLeave={() => this.handleMouseLeave()}
+                 // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
+                 // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
+                 // onMouseUp={() => this.handleMouseUp()}
+                 // onMouseLeave={() => this.handleMouseLeave()}
             >
 
                 {this.state.sections.map(section => {
