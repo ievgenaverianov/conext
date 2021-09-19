@@ -135,21 +135,27 @@ class Homepage extends Component {
     }
 
     handleEnd() {
-        if (this.state.deltaX > 0 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection > 1) {
-        this.setState({
-            activeSection: this.state.activeSection - 1,
-            touchStartX: 0,
-            touchStartY: 0,
-            beingTouched: false,
-        });
-        } else if (this.state.deltaX < 0 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
+        if (this.state.deltaX > 20 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection > 1) {
+            this.setState({
+                activeSection: this.state.activeSection - 1,
+                touchStartX: 0,
+                touchStartY: 0,
+                deltaX: 0,
+                deltaY: 0,
+                beingTouched: false,
+            });
+        } else if (this.state.deltaX < -20 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
             this.setState({
                 activeSection: this.state.activeSection + 1,
                 touchStartX: 0,
                 touchStartY: 0,
+                deltaX: 0,
+                deltaY: 0,
                 beingTouched: false,
             });
         }
+        console.log('deltaX=', this.state.deltaX)
+        console.log('deltaY=', this.state.deltaY)
     }
 
     // handleMouseDown(mouseDownEvent) {
@@ -178,10 +184,10 @@ class Homepage extends Component {
                  onTouchMove={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
                  onTouchEnd={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? () => this.handleTouchEnd() : null}
 
-                 // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
-                 // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
-                 // onMouseUp={() => this.handleMouseUp()}
-                 // onMouseLeave={() => this.handleMouseLeave()}
+                // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
+                // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
+                // onMouseUp={() => this.handleMouseUp()}
+                // onMouseLeave={() => this.handleMouseLeave()}
             >
 
                 {this.state.sections.map(section => {
