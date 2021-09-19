@@ -19,6 +19,9 @@ class Homepage extends Component {
         touchStartX: 0,
         prevTouchX: 0,
         deltaX: 0,
+        touchStartY: 0,
+        prevTouchY: 0,
+        deltaY: 0,
         beingTouched: false,
         sections: [
             {
@@ -40,7 +43,7 @@ class Homepage extends Component {
             {
                 id: 3,
                 title: 'Nos réalisations',
-                // isSliderShown: true
+                isSliderShown: true
             },
             {
                 id: 4,
@@ -97,69 +100,74 @@ class Homepage extends Component {
 
     handleTouchStart(touchStartEvent) {
         // touchStartEvent.preventDefault();
-        this.handleStart(touchStartEvent.targetTouches[0].clientX);
+        this.handleStart(touchStartEvent.targetTouches[0].clientX, touchStartEvent.targetTouches[0].clientY);
     }
 
     handleTouchMove(touchMoveEvent) {
-        this.handleMove(touchMoveEvent.targetTouches[0].clientX);
+        this.handleMove(touchMoveEvent.targetTouches[0].clientX, touchMoveEvent.targetTouches[0].clientY);
     }
 
     handleTouchEnd() {
         this.handleEnd();
     }
 
-    handleStart(clientX) {
+    handleStart(clientX, clientY) {
         this.setState({
             touchStartX: clientX,
+            touchStartY: clientY,
             beingTouched: true,
         });
     }
 
-    handleMove(clientX) {
+    handleMove(clientX, clientY) {
         if (this.state.beingTouched) {
             const touchX = clientX;
+            const touchY = clientY;
             let deltaX = touchX - this.state.touchStartX;
+            let deltaY = touchY - this.state.touchStartY;
             this.setState({
                 prevTouchX: touchX,
-                deltaX: deltaX
+                deltaX: deltaX,
+                prevTouchY: touchY,
+                deltaY: deltaY
             });
         }
     }
 
     handleEnd() {
-        if (this.state.deltaX > 0 && this.state.activeSection > 1) {
+        if (this.state.deltaX > 0 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection > 1) {
         this.setState({
             activeSection: this.state.activeSection - 1,
             touchStartX: 0,
+            touchStartY: 0,
             beingTouched: false,
         });
-            console.log(this.state.deltaX)
-        } else if (this.state.deltaX < 0 && this.state.activeSection < this.state.sections.length) {
+        } else if (this.state.deltaX < 0 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
             this.setState({
                 activeSection: this.state.activeSection + 1,
                 touchStartX: 0,
+                touchStartY: 0,
                 beingTouched: false,
             });
-            console.log(this.state.deltaX)
         }
     }
 
-    handleMouseDown(mouseDownEvent) {
-        mouseDownEvent.preventDefault();
-        this.handleStart(mouseDownEvent.clientX);
-    }
-
-    handleMouseMove(mouseMoveEvent) {
-        this.handleMove(mouseMoveEvent.clientX);
-    }
-
-    handleMouseUp() {
-        this.handleEnd();
-    }
-
-    handleMouseLeave() {
-        this.handleMouseUp();
-    }
+    // handleMouseDown(mouseDownEvent) {
+    //     mouseDownEvent.preventDefault();
+    //     this.handleStart(mouseDownEvent.clientX, mouseDownEvent.clientY);
+    // }
+    //
+    // handleMouseMove(mouseMoveEvent) {
+    //     this.handleMove(mouseMoveEvent.clientX, mouseMoveEvent.clientY);
+    // }
+    //
+    // handleMouseUp() {
+    //     this.handleEnd();
+    // }
+    //
+    // handleMouseLeave() {
+    //     this.handleMouseUp();
+    // }
 
     render() {
 

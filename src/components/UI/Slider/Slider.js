@@ -15,14 +15,14 @@ class Slider extends Component {
                 // renderArrowNext: (clickHandler: () => void, hasNext: boolean, label: string) => React.ReactNode;
             >
                 <SliderItem />
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
-                {/*<SliderItem />*/}
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
             </Carousel>
         );
     }
