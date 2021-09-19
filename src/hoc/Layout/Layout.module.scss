@@ -147,6 +147,7 @@
 
 @media screen and (max-width: 1279px) and (orientation: portrait) {
   .Layout{
+    background: transparent linear-gradient(270deg, #000A00 0%, #051019 100%) 0% 0% no-repeat padding-box;
     .Language {
       top: 53px;
       right: 123px;
@@ -159,6 +160,7 @@
       left: 37px;
       width: 144px;
       height: 52px;
+      z-index: 100;
     }
     .FbLogo, .IgLogo, .LnLogo {
       display: none;
@@ -168,6 +170,31 @@
       right: 49px;
       width: 48px;
       height: 48px;
+      z-index: 100;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Layout{
+    .Language {
+      top: 19px;
+      right: 59px;
+      width: 50px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+    .ContextLogo {
+      top: 17px;
+      left: 17px;
+      width: 68px;
+      height: 24px;
+    }
+    .PhoneButton {
+      bottom: 22px;
+      right: 24px;
+      width: 26px;
+      height: 26px;
     }
   }
 }

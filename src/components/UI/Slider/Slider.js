@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import SliderItem from "./SliderItem/SliderItem";
@@ -15,14 +15,14 @@ class Slider extends Component {
                 // renderArrowNext: (clickHandler: () => void, hasNext: boolean, label: string) => React.ReactNode;
             >
                 <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
-                <SliderItem />
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
+                {/*<SliderItem />*/}
             </Carousel>
         );
     }

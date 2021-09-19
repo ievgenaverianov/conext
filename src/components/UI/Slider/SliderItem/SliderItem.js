@@ -14,7 +14,7 @@ const SliderItem = props => {
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui.</p>
                 <Button>voir plus</Button>
             </div>
-            <img src={sliderPicOne} />
+            <img src={sliderPicOne} alt="slider-pic"/>
         </div>
     )
 }

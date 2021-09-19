@@ -2,8 +2,10 @@
   position: relative;
   height: 75px;
   font-size: 22px;
-  display: inline-block;
-  line-height: 1.136;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  //line-height: 1.136;
   border: 1px solid #FFFFFF;
   border-radius: 71px;
   font-family: 'Spartan', sans-serif;
@@ -38,5 +40,13 @@
   .Button {
     height: 60px;
     font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Button {
+    position: absolute;
+    height: 30px;
+    font-size: 10px;
   }
 }

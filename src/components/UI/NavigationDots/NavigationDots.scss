@@ -12,3 +12,33 @@
     transition: all .5s ease-in-out;
   }
 }
+
+@media screen and (max-width: 1439px) {
+  .NavigationDotsItem {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .NavigationDotsItem {
+    width: 10px;
+    height: 10px;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .NavigationDotsItem {
+    display: inline-block;
+    margin: 0 12px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .NavigationDotsItem {
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+  }
+}

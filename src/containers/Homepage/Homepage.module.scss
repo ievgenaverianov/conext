@@ -17,3 +17,37 @@
     right: 75px;
   }
 }
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Homepage {
+    .NavigationDots {
+      right: 47px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Homepage {
+    .NavigationDots {
+      display: block;
+      position: fixed;
+      top: unset;
+      right: unset;
+      bottom: 50px;
+      left: 36px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Homepage {
+    .NavigationDots {
+      bottom: 15px;
+      left: 17px;
+    }
+  }
+}

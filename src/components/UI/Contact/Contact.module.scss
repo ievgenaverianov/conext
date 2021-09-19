@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   span {
-    font: normal normal normal 14px/21px Spartan;
+    font: normal normal normal 14px/1.5em Spartan;
     color: #FFFFFF;
     opacity: 0.5;
   }
@@ -21,17 +21,78 @@
 @media screen and (max-width: 1800px) {
   .Contact {
     span {
-      font: normal normal normal 11px/15px Spartan;
-      color: #FFFFFF;
-      opacity: 0.5;
+      font-size: 11px;
     }
     i {
       width: 34px;
       height: 34px;
       margin-right: 10px;
-      cursor: pointer;
       &:nth-child(3) {
         margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Contact {
+    span {
+      font-size: 8px;
+    }
+    i {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      &:nth-child(3) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Contact {
+    span {
+      font-size: 13px;
+    }
+    i {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+      &:nth-child(3) {
+        margin-left: 48px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .Contact {
+    span {
+      font-size: 10px;
+    }
+    i {
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      &:nth-child(3) {
+        margin-left: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Contact {
+    span {
+      font-size: 7px;
+    }
+    i {
+      width: 16px;
+      height: 16px;
+      margin-right: 3px;
+      &:nth-child(3) {
+        margin-left: 10px;
       }
     }
   }

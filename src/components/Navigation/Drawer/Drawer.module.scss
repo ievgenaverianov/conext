@@ -106,3 +106,143 @@
   }
 
 }
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Drawer {
+    max-width: 300px;
+    padding: 0 33px 0 33px;
+    &>div{
+      width: 100%;
+      height: 74%;
+      margin-top: 0;
+    }
+    ul {
+      height: 64%;
+      list-style: none;
+      li {
+        margin-bottom: 5px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+    hr{
+      margin: 7px 0 10px 0;
+    }
+    span{
+      font-size: 9px;
+    }
+    p {
+      max-width: 150px;
+      font-size: 8px;
+      line-height: 10px;
+      margin: 7px 0 12px 0;
+    }
+  }
+  .Drawer.close{
+    transform: translateX(300px);
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Drawer {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 64px 0 64px;
+    &>div{
+      width: 100%;
+      height: 74%;
+      margin-top: 20%;
+    }
+    ul {
+      height: 54%;
+      list-style: none;
+      li {
+        margin-bottom: 9px;
+        a {
+          font-size: 52px;
+        }
+      }
+    }
+    hr{
+      height: 3px;
+      margin: 61px 0 56px 0;
+    }
+    span{
+      font-size: 45px;
+    }
+    p {
+      max-width: 100%;
+      font-size: 45px;
+      line-height: 2;
+      margin: 23px 0 73px 0
+    }
+  }
+  .Drawer.close{
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .Drawer {
+    padding: 0 48px 0 48px;
+    ul {
+      li {
+        margin-bottom: 7px;
+        a {
+          font-size: 39px;
+        }
+      }
+    }
+    hr{
+      height: 2px;
+      margin: 46px 0 42px 0;
+    }
+    span{
+      font-size: 34px;
+    }
+    p {
+      font-size: 34px;
+      margin: 17px 0 55px 0
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Drawer {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 58px 0 58px;
+    &>div{
+      width: 100%;
+      height: 74%;
+      margin-top: 24%;
+    }
+    ul {
+      height: 54%;
+      list-style: none;
+      li {
+        margin-bottom: 9px;
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+    hr{
+      height: 1px;
+      margin: 3% 0 2% 0;
+    }
+    span{
+      font-size: 10px;
+    }
+    p {
+      max-width: 100%;
+      font-size: 10px;
+      line-height: 1.5;
+      margin: 5% 0 20% 0
+    }
+  }
+  .Drawer.close{
+    transform: translateX(100%);
+  }
+}
