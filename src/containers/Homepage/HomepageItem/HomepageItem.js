@@ -1,4 +1,5 @@
 import React from "react";
+import {CSSTransition} from "react-transition-group";
 import "./HomepageItem.scss"
 import Button from "../../../components/UI/Button/Button";
 import Carousel from "../../../components/UI/Slider/Slider";
@@ -9,6 +10,11 @@ const HomepageItem = props => {
     if (props.isActive) cssClasses += ` active`;
 
     return (
+        <CSSTransition
+            in={props.isActive}
+            timeout={2000}
+            classNames="hpi"
+        >
         <section className={cssClasses}>
             { (props.image && window.screen.width <= 1279 && window.innerHeight > window.innerWidth) ? <img src={props.imageTablet} alt="homepage-pic"/> :
               (props.image && window.innerHeight < window.innerWidth) ? <img src={props.image} alt="homepage-pic"/> : null }
@@ -16,9 +22,10 @@ const HomepageItem = props => {
             <h2>{props.title}</h2>
             <p>{props.text}</p>
             { props.isButtonShown ? <Button>{props.buttonText}</Button> : null }
-            { props.isSliderShown ? <Carousel /> : null }
+            { props.isSliderShown ? <Carousel isActive={props.isActive}/> : null }
             </div>
         </section>
+        </CSSTransition>
     )
 }
 

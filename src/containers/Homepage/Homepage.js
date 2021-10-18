@@ -73,13 +73,13 @@ class Homepage extends Component {
             if (e.deltaY > 0) {
                 if (this.state.activeSection < this.state.sections.length) {
                     this.setState({
-                        activeSection: this.state.activeSection + 1
+                        activeSection: this.state.activeSection + 1,
                     })
                 }
             } else {
                 if (this.state.activeSection > 1) {
                     this.setState({
-                        activeSection: this.state.activeSection - 1
+                        activeSection: this.state.activeSection - 1,
                     })
                 }
             }
@@ -88,7 +88,7 @@ class Homepage extends Component {
             })
             setTimeout(() => this.setState({
                 canBeScrolled: !this.state.canBeScrolled
-            }), 1000);
+            }), 2000);
         }
     }
 
@@ -135,7 +135,7 @@ class Homepage extends Component {
     }
 
     handleEnd() {
-        if (this.state.deltaX > 20 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection > 1) {
+        if (this.state.deltaY > 20 && (Math.abs(this.state.deltaX) < Math.abs(this.state.deltaY)) && this.state.activeSection > 1) {
             this.setState({
                 activeSection: this.state.activeSection - 1,
                 touchStartX: 0,
@@ -144,7 +144,7 @@ class Homepage extends Component {
                 deltaY: 0,
                 beingTouched: false,
             });
-        } else if (this.state.deltaX < -20 && (Math.abs(this.state.deltaX) > Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
+        } else if (this.state.deltaY < -20 && (Math.abs(this.state.deltaX) < Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
             this.setState({
                 activeSection: this.state.activeSection + 1,
                 touchStartX: 0,
@@ -157,6 +157,11 @@ class Homepage extends Component {
         console.log('deltaX=', this.state.deltaX)
         console.log('deltaY=', this.state.deltaY)
     }
+
+    // onBtnClickHandler = () => {
+    //     console.log('button clicked')
+    // }
+
 
     // handleMouseDown(mouseDownEvent) {
     //     mouseDownEvent.preventDefault();
@@ -179,17 +184,16 @@ class Homepage extends Component {
 
         return (
             <div className={classes.Homepage}
-                 onWheel={(window.innerHeight < window.innerWidth) ? this.onScrollEventHandler : null }
-                 onTouchStart={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
-                 onTouchMove={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
-                 onTouchEnd={(window.screen.width < 1279 && window.innerHeight > window.innerWidth) ? () => this.handleTouchEnd() : null}
+                 onWheel={this.onScrollEventHandler}
+                 onTouchStart={(window.screen.width < 1279) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
+                 onTouchMove={(window.screen.width < 1279) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
+                 onTouchEnd={(window.screen.width < 1279) ? () => this.handleTouchEnd() : null}
 
                 // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
                 // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
                 // onMouseUp={() => this.handleMouseUp()}
                 // onMouseLeave={() => this.handleMouseLeave()}
             >
-
                 {this.state.sections.map(section => {
                         return (
                             <HomepageItem

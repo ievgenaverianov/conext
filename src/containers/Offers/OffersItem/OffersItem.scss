@@ -1,0 +1,283 @@
+.OffersItem {
+  width: 450px;
+  height: 525px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #FFFFFF;
+  border-radius: 32px;
+  margin: 0 15px;
+  padding: 15px 43px;
+  box-sizing: border-box;
+  img {
+    height: 197px;
+    width: auto;
+  }
+  h2 {
+    width: 250px;
+    font: normal normal bold 32px/1.1875em Spartan;
+    margin-top: 16px;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin: 35px 0 0 0;
+    }
+  }
+  p {
+    font: normal normal normal 14px/1.4286em Spartan;
+    opacity: 0.35;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .OffersItem {
+    width: 337px;
+    height: 394px;
+    border-radius: 24px;
+    margin: 0 11px;
+    padding: 11px 30px;
+    img {
+      height: 148px;
+    }
+    h2 {
+      width: 187px;
+      font-size: 24px;
+      margin-top: 12px;
+      &:after{
+        width: 96px;
+        margin: 26px 0 0 0;
+      }
+    }
+    p {
+      font-size: 11px;
+      margin-top: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .OffersItem {
+    width: 300px;
+    height: 350px;
+    border-radius: 21px;
+    margin: 0 10px;
+    padding: 10px 27px;
+    img {
+      height: 132px;
+    }
+    h2 {
+      width: 166px;
+      font-size: 21px;
+      &:after{
+        width: 85px;
+        margin: 23px 0 0 0;
+      }
+    }
+    p {
+      font-size: 10px;
+      margin-top: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .OffersItem {
+    width: 133px;
+    height: 170px;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 5px 12px;
+    img {
+      height: 59px;
+    }
+    h2 {
+      width: 74px;
+      font-size: 10px;
+      &:after{
+        width: 38px;
+        height: 2px;
+        margin: 10px 0 0 0;
+      }
+    }
+    p {
+      font-size: 5px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .OffersItem {
+    width: 560px;
+    height: 280px;
+    border-radius: 30px;
+    margin: 91px 0;
+    padding: 32px 25px 30px 40px;
+    &.item-1 {
+      img {
+        top: -166px;
+        left: 53%;
+      }
+    }
+    &.item-2 {
+      order: -1;
+      img {
+        top: -219px;
+        left: 50%;
+      }
+    }
+    &.item-3 {
+      img {
+        top: -182px;
+        left: 58%;
+      }
+    }
+    img {
+      height: 252px;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+    h2 {
+      width: 50%;
+      font-size: 27px;
+      line-height: 1.6;
+      margin-top: 0;
+      &:after{
+        width: 78px;
+        height: 5px;
+        margin: 17px 0 0 0;
+      }
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .OffersItem {
+    width: 448px;
+    height: 224px;
+    border-radius: 24px;
+    margin: 73px 0;
+    padding: 26px 20px 26px 32px;
+    &.item-1 {
+      img {
+        top: -133px;
+      }
+    }
+    &.item-2 {
+      img {
+        top: -175px;
+      }
+    }
+    &.item-3 {
+      img {
+        top: -146px;
+      }
+    }
+    img {
+      height: 202px;
+    }
+    h2 {
+      font-size: 21px;
+      &:after{
+        width: 63px;
+        height: 4px;
+        margin: 14px 0 0 0;
+      }
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .OffersItem {
+    width: 327px;
+    height: 163px;
+    border-radius: 29px;
+    margin: 58px 0;
+    padding: 22px;
+    &.item-1 {
+      img {
+        top: -95px;
+      }
+    }
+    &.item-2 {
+      img {
+        top: -122px;
+        left: 48%;
+      }
+    }
+    &.item-3 {
+      img {
+        top: -108px;
+        left: 47%;
+      }
+    }
+    img {
+      height: 147px;
+    }
+    h2 {
+      width: 33%;
+      font-size: 12px;
+      &:after{
+        width: 48px;
+        height: 2px;
+        margin: 13px 0 0 0;
+      }
+    }
+    p {
+      font-size: 8px;
+      line-height: 2.143;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) and (orientation: portrait) {
+  .OffersItem {
+    width: 279px;
+    height: 139px;
+    margin: 50px 0;
+    padding: 19px;
+    &.item-1 {
+      img {
+        top: -81px;
+      }
+    }
+    &.item-2 {
+      img {
+        top: -104px;
+      }
+    }
+    &.item-3 {
+      img {
+        top: -92px;
+      }
+    }
+    img {
+      height: 125px;
+    }
+    h2 {
+      font-size: 10px;
+      &:after{
+        width: 41px;
+        margin: 11px 0 0 0;
+      }
+    }
+    p {
+      font-size: 7px;
+      margin-top: 12px;
+    }
+  }
+}

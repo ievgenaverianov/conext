@@ -1,0 +1,210 @@
+.Offers {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Spartan', sans-serif;
+  color: #fff;
+  margin: -40px 0 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  h1 {
+    font: normal normal bold 66px/1.4697em Spartan;
+    text-align: center;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin: 0 auto;
+    }
+  }
+  button {
+    width: 450px;
+    margin-top: 30px;
+  }
+}
+
+.OffersContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GreenLines {
+  position: relative;
+  width: 960px;
+  height: 30px;
+  border: 1px solid #00DE81;
+  border-top: none;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #00DE81;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .Offers {
+    margin: -30px 0 0 0;
+    h1 {
+      font-size: 49px;
+      &:after{
+        height: 3px;
+        width: 96px;
+      }
+    }
+    button {
+      width: 337px;
+      margin-top: 22px;
+    }
+  }
+  .GreenLines {
+    width: 720px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .Offers {
+    margin: -27px 0 0 0;
+    h1 {
+      font-size: 44px;
+      &:after{
+        width: 85px;
+      }
+    }
+    button {
+      width: 299px;
+      margin-top: 20px;
+    }
+  }
+  .GreenLines {
+    width: 640px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Offers {
+    margin: -12px 0 0 0;
+    h1 {
+      font-size: 20px;
+      &:after{
+        width: 38px;
+        height: 2px;
+      }
+    }
+    button {
+      width: 133px;
+      margin-top: 10px;
+      font-size: 9px;
+    }
+  }
+  .GreenLines {
+    width: 284px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Offers {
+    justify-content: flex-start;
+    margin: 172px 0 0 0;
+    h1 {
+      font-size: 50px;
+      &:after{
+        width: 100px;
+        height: 5px;
+      }
+    }
+    button {
+      width: 412px;
+      margin: 12px 0 169px 0;
+      font-size: 24px;
+    }
+  }
+  .OffersContent {
+    flex-direction: column;
+    margin-top: 154px;
+  }
+  .GreenLines {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .Offers {
+    margin: 138px 0 0 0;
+    h1 {
+      font-size: 40px;
+      &:after{
+        width: 80px;
+        height: 4px;
+      }
+    }
+    button {
+      width: 330px;
+      margin: 10px 0 135px 0;
+      font-size: 19px;
+    }
+  }
+  .OffersContent {
+    margin-top: 123px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Offers {
+    margin: 55px 0 0 0;
+    h1 {
+      font-size: 22px;
+      &:after{
+        width: 46px;
+        height: 2px;
+        margin-top: 4px;
+      }
+    }
+    button {
+      position: relative;
+      width: 238px;
+      height: 44px;
+      margin: -1px 0 158px 0;
+      font-size: 12px;
+    }
+  }
+  .OffersContent {
+    margin-top: 87px;
+  }
+}
+
+@media screen and (max-width: 374px) and (orientation: portrait) {
+  .Offers {
+    margin: 47px 0 0 0;
+    h1 {
+      font-size: 19px;
+      &:after{
+        width: 40px;
+      }
+    }
+    button {
+      width: 203px;
+      height: 38px;
+      margin: -1px 0 135px 0;
+      font-size: 10px;
+    }
+  }
+  .OffersContent {
+    margin-top: 74px;
+  }
+}

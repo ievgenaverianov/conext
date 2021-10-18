@@ -3,7 +3,6 @@
 .Homepage {
   position: relative;
   width: 100%;
-  height: 100%;
   font-family: 'Spartan', sans-serif;
   color: #fff;
   margin: 0;
@@ -15,6 +14,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 75px;
+    z-index: 20;
   }
 }
 

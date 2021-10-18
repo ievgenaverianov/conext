@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import classes from './Layout.module.scss';
 import MenuToggle from "../../components/Navigation/MenuToggle/MenuToggle";
 import Drawer from "../../components/Navigation/Drawer/Drawer";
-import contextLogo from "../../img/context-logo.svg"
+import contextLogo from "../../img/conext-logo.svg"
 import fbLogo from "../../img/facebook.svg"
 import igLogo from "../../img/instagram.svg"
 import lnLogo from "../../img/linkedin.svg"
