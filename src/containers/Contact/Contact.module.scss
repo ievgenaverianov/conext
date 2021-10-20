@@ -1,0 +1,132 @@
+.Contact {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: transparent linear-gradient(90deg, #000A00 0%, #081326 100%) 0% 0% no-repeat padding-box;
+  font-family: "Spartan", sans-serif;
+  h1 {
+    font: normal normal bold 65px/1.4697em Spartan;
+    text-align: center;
+    margin: -50px 0 0 0;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin: 0 auto;
+    }
+  }
+  button {
+    width: 150px;
+    height: 45px;
+    font-size: 14px;
+    border-color: rgba(255, 255, 255, .35);
+  }
+}
+
+.ContactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  label {
+    font: normal normal normal 14px/20px Spartan;
+    display: block;
+    opacity: 0.35;
+    margin: 22px 0 13px 0;
+  };
+  div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  textarea {
+    width: 600px;
+    height: 240px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 32px;
+    background-color: transparent;
+    font: normal normal normal 14px/19px Spartan;
+    color: rgba(255, 255, 255, .5);
+    padding: 25px 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .Contact {
+    h1 {
+      font-size: 48px;
+      margin: -37px 0 0 0;
+      &:after{
+        height: 3px;
+        width: 96px;
+      }
+    }
+    button {
+      width: 112px;
+      height: 34px;
+      font-size: 10px;
+    }
+  }
+  .ContactForm {
+    label {
+      font-size: 10px;
+      margin: 16px 0 10px 0;
+    };
+    div:last-child {
+      margin-top: 15px;
+    }
+    textarea {
+      width: 450px;
+      height: 180px;
+      border-radius: 24px;
+      font-size: 10px;
+      padding: 18px 22px;
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+  .Contact {
+    h1 {
+      font-size: 42px;
+      margin: -33px 0 0 0;
+      &:after{
+        width: 85px;
+      }
+    }
+    button {
+      width: 100px;
+      height: 30px;
+      font-size: 9px;
+    }
+  }
+  .ContactForm {
+    label {
+      font-size: 9px;
+      margin: 14px 0 9px 0;
+    };
+    div:last-child {
+      margin-top: 13px;
+      div span {
+        font-size: 9px;
+      }
+    }
+    textarea {
+      width: 400px;
+      height: 160px;
+      border-radius: 21px;
+      font-size: 9px;
+      padding: 16px 19px;
+    }
+  }
+}

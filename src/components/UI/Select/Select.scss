@@ -1,0 +1,77 @@
+.Select {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-left: none;
+    border-top: none;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+  }
+  label {
+    text-align: center;
+    font: normal normal normal 14px/20px Spartan;
+    color: #fff;
+    opacity: 0.35;
+  }
+  select {
+    width: 600px;
+    height: 45px;
+    border: 1px solid #FFFFFF;
+    border-radius: 43px;
+    background-color: #686868;
+    font: normal normal normal 14px/20px Spartan;
+    color: #FFFFFF;
+    opacity: 0.5;
+    padding: 0 22px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .Select {
+    &:after {
+      right: 15px;
+      bottom: 15px;
+      width: 8px;
+      height: 8px;
+    }
+    label {
+      font-size: 10px;
+    }
+    select {
+      width: 450px;
+      height: 34px;
+      font-size: 10px;
+      padding: 0 16px;
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+  .Select {
+    &:after {
+      right: 14px;
+      bottom: 14px;
+      width: 7px;
+      height: 7px;
+    }
+    label {
+      font-size: 9px;
+    }
+    select {
+      width: 400px;
+      height: 30px;
+      font-size: 9px;
+      padding: 0 14px;
+    }
+  }
+}

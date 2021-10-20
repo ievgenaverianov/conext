@@ -1,8 +1,10 @@
 import React from "react";
 import {CSSTransition} from "react-transition-group";
+import {NavLink} from "react-router-dom";
 import "./HomepageItem.scss"
 import Button from "../../../components/UI/Button/Button";
 import Carousel from "../../../components/UI/Slider/Slider";
+import Offers from "../../Offers/Offers";
 
 const HomepageItem = props => {
 
@@ -21,7 +23,7 @@ const HomepageItem = props => {
             <div className="HomepageItem__content">
             <h2>{props.title}</h2>
             <p>{props.text}</p>
-            { props.isButtonShown ? <Button>{props.buttonText}</Button> : null }
+            { props.isButtonShown ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
             { props.isSliderShown ? <Carousel isActive={props.isActive}/> : null }
             </div>
         </section>

@@ -31,7 +31,8 @@ class Homepage extends Component {
                 image: homepagePicOne,
                 imageTablet: homepagePicOneTablet,
                 isButtonShown: true,
-                buttonText: 'voir plus'
+                buttonText: 'voir plus',
+                buttonLink: '/notre-offre'
             },
             {
                 id: 2,
@@ -52,7 +53,8 @@ class Homepage extends Component {
                 image: homepagePicFour,
                 imageTablet: homepagePicFourTablet,
                 isButtonShown: true,
-                buttonText: 'découvrir nos offres'
+                buttonText: 'découvrir nos offres',
+                buttonLink: '/notre-offre'
             },
             {
                 id: 5,
@@ -61,7 +63,8 @@ class Homepage extends Component {
                 image: homepagePicFive,
                 imageTablet: homepagePicFiveTablet,
                 isButtonShown: true,
-                buttonText: 'en savoir plus'
+                buttonText: 'en savoir plus',
+                buttonLink: '/notre-offre'
             },
         ]
     };
@@ -206,6 +209,7 @@ class Homepage extends Component {
                                 imageTablet={section.imageTablet}
                                 isButtonShown={section.isButtonShown}
                                 buttonText={section.buttonText}
+                                buttonLink={section.buttonLink}
                                 isSliderShown={section.isSliderShown}
                             />
                         )

@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./Contact.module.scss";
+import classes from "./ContactInfo.module.scss";
 import phoneIcon from "../../../img/phone.svg"
 import emailIcon from "../../../img/email.svg"
 
-const Contact = props => {
+const ContactInfo = props => {
 
     return (
         <div className={classes.Contact}>
@@ -13,4 +13,4 @@ const Contact = props => {
     )
 }
 
-export default Contact
+export default ContactInfo

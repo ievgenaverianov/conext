@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import classes from './Drawer.module.scss';
 import {NavLink} from "react-router-dom";
 import Backdrop from "../../UI/Backdrop/Backdrop";
-import Contact from "../../UI/Contact/Contact";
+import ContactInfo from "../../UI/ContactInfo/ContactInfo";
 
 class Drawer extends Component {
 
@@ -55,7 +55,7 @@ class Drawer extends Component {
                         <hr />
                         <span>Contactez nous !</span>
                         <p>Une idée ? Un projet ? Nous serons ravis de répondre à vos questions</p>
-                        <Contact />
+                        <ContactInfo />
                     </div>
                 </nav>
                 {this.props.isOpen ? <Backdrop onClick={this.props.onClose}/> : null}
