@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import "./HomepageItem.scss"
 import Button from "../../../components/UI/Button/Button";
 import Carousel from "../../../components/UI/Slider/Slider";
-import Offers from "../../Offers/Offers";
 
 const HomepageItem = props => {
 

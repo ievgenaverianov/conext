@@ -1,46 +1,109 @@
 .Input {
-  label {
-    text-align: center;
-    font: normal normal normal 14px/20px Spartan;
-    color: #fff;
-    opacity: 0.35;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spartan", sans-serif;
   input {
     width: 600px;
     height: 45px;
     border: 1px solid #FFFFFF;
     border-radius: 43px;
     opacity: 0.35;
+    font-size: 14px;
     color: #fff;
     background-color: transparent;
     padding: 0 22px;
     box-sizing: border-box;
+    outline: none;
+  }
+  &.invalid input {
+    border-color: #f01f30;
+  }
+  span {
+    display: block;
+    color: #f01f30;
+    font-size: 12px;
+    line-height: 2;
+    text-align: left;
   }
 }
 
 @media screen and (max-width: 1800px) {
   .Input {
-    label {
-      font-size: 10px;
-    }
     input {
       width: 450px;
       height: 34px;
       font-size: 10px;
       padding: 0 16px;
     }
+    span {
+      font-size: 10px;
+    }
   }
 }
 @media screen and (max-width: 1439px) {
   .Input {
-    label {
-      font-size: 9px;
-    }
     input {
       width: 400px;
       height: 30px;
       font-size: 9px;
       padding: 0 14px;
+    }
+    span {
+      font-size: 9px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Input {
+    input {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Input {
+    input {
+      width: 640px;
+      height: 43px;
+      font-size: 15px;
+      padding: 0 18px;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .Input {
+    input {
+      width: 480px;
+      height: 32px;
+      font-size:11px;
+      padding: 0 14px;
+    }
+    span {
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Input {
+    input {
+      width: 250px;
+      height: 17px;
+      font-size: 8px;
+      padding: 0 10px;
+    }
+    span {
+      font-size: 8px;
     }
   }
 }

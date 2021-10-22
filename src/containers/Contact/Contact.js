@@ -4,32 +4,42 @@ import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
 import Select from "../../components/UI/Select/Select";
 import ContactInfo from "../../components/UI/ContactInfo/ContactInfo";
+import ContactFormSent from "./ContactFormSent/ContactFormSent";
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 
 class Contact extends Component {
 
     state = {
         isFormValid: false,
-        contactIssue:'',
+        contactIssue: 1,
+        formSent: false,
         formControls: {
-            password: {
-                // value: '',
-                type: 'name',
+            userName: {
+                value: '',
+                type: 'text',
                 label: 'Votre nom*',
-                errorMessage: 'Enter correct password',
+                errorMessage: 'Enter correct name',
                 valid: false,
                 touched: false,
+                focused: false,
                 validation: {
                     required: true,
-                    minLength: 6
+                    minLength: 2
                 }
             },
             email: {
-                // value: '',
+                value: '',
                 type: 'email',
                 label: 'Téléphone ou E-mail*',
-                errorMessage: 'Enter correct email',
+                errorMessage: 'Enter correct email or phone number',
                 valid: false,
                 touched: false,
+                focused: false,
                 validation: {
                     required: true,
                     email: true
@@ -39,14 +49,75 @@ class Contact extends Component {
     }
 
     sendFormHandler = () => {
+        this.setState({
+            formSent: true,
+        })
+        console.log('Form sent')
     }
 
     submitHandler = event => {
         event.preventDefault()
     }
 
-    onChangeHandler = () => {
+    validateControl(value, validation) {
+        if (!validation) {
+            return true
+        }
+        let isValid = true;
 
+        if (validation.required) {
+            isValid = value.trim() !== '' && isValid
+        }
+        if (validation.email) {
+            isValid = validateEmail(value) && isValid
+        }
+        if (validation.minLength) {
+            isValid = value.length >= validation.minLength && isValid
+        }
+
+        return isValid
+    }
+
+    onChangeHandler = (event, controlName) => {
+        const formControls = {...this.state.formControls};
+        const control = {...formControls[controlName]};
+
+        control.value = event.target.value;
+        control.touched = true;
+        control.valid = this.validateControl(control.value, control.validation);
+        formControls[controlName] = control;
+
+        let isFormValid = true
+
+        Object.keys(formControls).forEach(name => {
+            isFormValid = formControls[name].valid && isFormValid
+        })
+
+        this.setState({
+            formControls, isFormValid
+        })
+    }
+
+    onFocusHandler = (controlName) => {
+        const formControls = {...this.state.formControls};
+        const control = {...formControls[controlName]};
+
+        control.focused = true;
+        formControls[controlName] = control;
+        this.setState({
+            formControls
+        })
+    }
+
+    onBlurHandler = (controlName) => {
+        const formControls = {...this.state.formControls};
+        const control = {...formControls[controlName]};
+
+        control.focused = false;
+        formControls[controlName] = control;
+        this.setState({
+            formControls
+        })
     }
 
     renderInputs() {
@@ -56,13 +127,16 @@ class Contact extends Component {
                 <Input
                     key={controlName + index}
                     type={control.type}
-                    // value={control.value}
+                    value={control.value}
                     valid={control.valid}
                     touched={control.touched}
                     label={control.label}
                     shouldValidate={!!control.validation}
                     errorMessage={control.errorMessage}
                     onChange={event => this.onChangeHandler(event, controlName)}
+                    onFocus={() => this.onFocusHandler(controlName)}
+                    onBlur={() => this.onBlurHandler(controlName)}
+                    focused={control.focused}
                 />
             )
         })
@@ -80,31 +154,35 @@ class Contact extends Component {
             value={this.state.contactIssue}
             onChange={this.selectChangeHandler}
             options={[
-                {text: 'Demande de devis', value: 'Demande de devis'},
-                {text: 'Climate issues', value: 'Climate issues'},
-                {text: 'Personal isuues', value: 'Personal isuues'},
+                {text: 'Demande de devis', value: 1},
+                {text: 'Climate issues', value: 2},
+                {text: 'Personal issues', value: 3},
             ]}
         />
         return (
             <div className={classes.Contact}>
-                    <h1>Contact</h1>
-                    <form onSubmit={this.submitHandler} className={classes.ContactForm}>
-                        {this.renderInputs()}
-                        {select}
-                        <label htmlFor="questionTextarea">Votre message :</label>
-                        <textarea id="questionTextarea" placeholder="Parlez-nous de votre projet..." />
-                        <div>
-                            <ContactInfo />
-                            <Button
-                                type="success"
-                                onClick={this.sendFormHandler}
-                                disabled={!this.state.isFormValid}
-                            >
-                                Envoyer
-                            </Button>
-                        </div>
+                <h1>Contact</h1>
+                {
+                    !this.state.formSent ?
+                <form onSubmit={this.submitHandler} className={classes.ContactForm}>
+                    {this.renderInputs()}
+                    {select}
+                    <label htmlFor="questionTextarea">Votre message :</label>
+                    <textarea id="questionTextarea" placeholder="Parlez-nous de votre projet..." />
+                    <div>
+                        <ContactInfo />
+                        <Button
+                            type="success"
+                            onClick={this.sendFormHandler}
+                            disabled={!this.state.isFormValid}
+                        >
+                            Envoyer
+                        </Button>
+                    </div>
+                </form>
+                        : <ContactFormSent/>
 
-                    </form>
+                }
             </div>
         )
     }

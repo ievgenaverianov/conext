@@ -1,4 +1,8 @@
 .Select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   &:after {
     content: '';
@@ -13,12 +17,6 @@
     border-top: none;
     box-sizing: border-box;
     transform: rotate(45deg);
-  }
-  label {
-    text-align: center;
-    font: normal normal normal 14px/20px Spartan;
-    color: #fff;
-    opacity: 0.35;
   }
   select {
     width: 600px;
@@ -45,9 +43,6 @@
       width: 8px;
       height: 8px;
     }
-    label {
-      font-size: 10px;
-    }
     select {
       width: 450px;
       height: 34px;
@@ -64,14 +59,73 @@
       width: 7px;
       height: 7px;
     }
-    label {
-      font-size: 9px;
-    }
     select {
       width: 400px;
       height: 30px;
       font-size: 9px;
       padding: 0 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .Select {
+    select {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .Select {
+    &:after {
+      right: 20px;
+      bottom: 18px;
+      width: 12px;
+      height: 12px;
+    }
+    select {
+      width: 640px;
+      height: 43px;
+      font-size: 15px;
+      padding: 0 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .Select {
+    &:after {
+      right: 16px;
+      bottom: 14px;
+      width: 8px;
+      height: 8px;
+    }
+    select {
+      width: 480px;
+      height: 32px;
+      font-size: 11px;
+      padding: 0 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Select {
+    &:after {
+      right: 8px;
+      bottom: 7px;
+      width: 6px;
+      height: 6px;
+    }
+    select {
+      width: 250px;
+      height: 17px;
+      font-size: 8px;
+      line-height: 17px;
+      padding: 0 10px;
     }
   }
 }

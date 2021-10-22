@@ -65,6 +65,10 @@
     opacity: 0;
     transition: all 1s ease-in-out;
   }
+  a {
+    text-decoration: none;
+  }
+
 
   /*HOME PAGE - SECTION 1*/
   &.item-1 {
