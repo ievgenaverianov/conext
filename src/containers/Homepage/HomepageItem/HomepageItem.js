@@ -3,7 +3,7 @@ import {CSSTransition} from "react-transition-group";
 import {NavLink} from "react-router-dom";
 import "./HomepageItem.scss"
 import Button from "../../../components/UI/Button/Button";
-import Carousel from "../../../components/UI/Slider/Slider";
+import Slider from "../../../components/UI/Slider/Slider";
 
 const HomepageItem = props => {
 
@@ -23,7 +23,7 @@ const HomepageItem = props => {
             <h2>{props.title}</h2>
             <p>{props.text}</p>
             { props.isButtonShown ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
-            { props.isSliderShown ? <Carousel isActive={props.isActive}/> : null }
+            { props.isSliderShown ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
             </div>
         </section>
         </CSSTransition>

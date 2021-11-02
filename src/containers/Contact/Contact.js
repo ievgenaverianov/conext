@@ -23,26 +23,27 @@ class Contact extends Component {
                 value: '',
                 type: 'text',
                 label: 'Votre nom*',
-                errorMessage: 'Enter correct name',
+                errorMessage: 'Enter correct name (minimum 5 symbols)',
                 valid: false,
                 touched: false,
                 focused: false,
                 validation: {
                     required: true,
-                    minLength: 2
+                    minLength: 5
                 }
             },
             email: {
                 value: '',
                 type: 'email',
                 label: 'Téléphone ou E-mail*',
-                errorMessage: 'Enter correct email or phone number',
+                errorMessage: 'Enter correct email or phone number (minimum 10 symbols)',
                 valid: false,
                 touched: false,
                 focused: false,
                 validation: {
                     required: true,
-                    email: true
+                    // email: true,
+                    minLength: 10
                 }
             }
         }
@@ -161,25 +162,28 @@ class Contact extends Component {
         />
         return (
             <div className={classes.Contact}>
-                <h1>Contact</h1>
                 {
                     !this.state.formSent ?
-                <form onSubmit={this.submitHandler} className={classes.ContactForm}>
-                    {this.renderInputs()}
-                    {select}
-                    <label htmlFor="questionTextarea">Votre message :</label>
-                    <textarea id="questionTextarea" placeholder="Parlez-nous de votre projet..." />
-                    <div>
-                        <ContactInfo />
-                        <Button
-                            type="success"
-                            onClick={this.sendFormHandler}
-                            disabled={!this.state.isFormValid}
-                        >
-                            Envoyer
-                        </Button>
-                    </div>
-                </form>
+                        <>
+                            <h1>Contact</h1>
+                            <form onSubmit={this.submitHandler} className={classes.ContactForm}>
+                                {this.renderInputs()}
+                                {select}
+                                <label htmlFor="questionTextarea">Votre message :</label>
+                                <textarea id="questionTextarea" placeholder="Parlez-nous de votre projet..." />
+                                <div className={classes.Contact__Info}>
+                                    <ContactInfo />
+                                    <Button
+                                        type="success"
+                                        onClick={this.sendFormHandler}
+                                        disabled={!this.state.isFormValid}
+                                    >
+                                        Envoyer
+                                    </Button>
+                                </div>
+                            </form>
+                        </>
+
                         : <ContactFormSent/>
 
                 }

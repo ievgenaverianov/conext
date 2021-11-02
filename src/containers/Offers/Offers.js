@@ -4,6 +4,7 @@ import offersPicOne from "../../img/offers-pic-1.png"
 import offersPicTwo from "../../img/offers-pic-2.png"
 import offersPicThree from "../../img/offers-pic-3.png"
 import OffersItem from "./OffersItem/OffersItem";
+import {NavLink} from "react-router-dom";
 import Button from "../../components/UI/Button/Button";
 
 class Offers extends Component {
@@ -50,8 +51,8 @@ class Offers extends Component {
                         }
                     )}
                 </div>
-                <div className={classes.GreenLines}></div>
-                <Button>obtenir un devis gratuit</Button>
+                <div className={classes.GreenLines} />
+                <NavLink to='/contact'><Button>obtenir un devis gratuit</Button></NavLink>
             </div>
         )
     }

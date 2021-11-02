@@ -5,8 +5,9 @@ import Drawer from "../../components/Navigation/Drawer/Drawer";
 import contextLogo from "../../img/conext-logo.svg"
 import fbLogo from "../../img/facebook.svg"
 import igLogo from "../../img/instagram.svg"
-import lnLogo from "../../img/linkedin.svg"
+import lnLogo from "../../img/linkedin-grey.svg"
 import phoneButton from "../../img/phone-btn.svg";
+import {NavLink} from "react-router-dom";
 
 class Layout extends Component {
 
@@ -45,7 +46,9 @@ class Layout extends Component {
                     <span className={classes.white}>FR</span>
                 </div>
 
-                <i className={classes.ContextLogo} style={{backgroundImage: 'url(' + contextLogo + ')'}} />
+                <NavLink to='/'>
+                    <i className={classes.ContextLogo} style={{backgroundImage: 'url(' + contextLogo + ')'}} />
+                </NavLink>
                 <i className={classes.FbLogo} style={{backgroundImage: 'url(' + fbLogo + ')'}} />
                 <i className={classes.IgLogo} style={{backgroundImage: 'url(' + igLogo + ')'}} />
                 <i className={classes.LnLogo} style={{backgroundImage: 'url(' + lnLogo + ')'}} />

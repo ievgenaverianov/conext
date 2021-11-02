@@ -8,7 +8,7 @@ const ContactInfo = props => {
     return (
         <div className={classes.Contact}>
             <i style={{backgroundImage: 'url(' + phoneIcon + ')'}} /><span>06 05 04 03 02</span>
-            <i style={{backgroundImage: 'url(' + emailIcon + ')'}} /><span>info@conext.com</span>
+            <i style={{backgroundImage: 'url(' + emailIcon + ')'}} /><span>info@conext-agence.com</span>
         </div>
     )
 }

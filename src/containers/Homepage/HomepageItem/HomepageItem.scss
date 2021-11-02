@@ -656,7 +656,7 @@
       animation: none;
     }
     &.active ~ .hpi-exit-active .HomepageItem__content > p,
-    &.active ~ .hpi-exit-active .HomepageItem__content > button{
+    &.active ~ .hpi-exit-active .HomepageItem__content > a {
       animation: next-text-fade 1s ease-in-out;
     }
     &.hpi-enter-active .HomepageItem__content > h2,
@@ -664,11 +664,11 @@
       animation: next-title-appear-mob 2s ease-in-out;
     }
     &.hpi-enter-active .HomepageItem__content > p,
-    &.hpi-enter-active .HomepageItem__content > button{
+    &.hpi-enter-active .HomepageItem__content > a {
       animation: next-text-appear 2s ease-in-out;
     }
     &.hpi-exit-active .HomepageItem__content > p,
-    &.hpi-exit-active .HomepageItem__content > button {
+    &.hpi-exit-active .HomepageItem__content > a {
       animation: next-text-remove-mob 1s ease-in-out;
     }
     .HomepageItem__content {
@@ -963,6 +963,10 @@
       width: 100%;
       height: auto;
     }
+    a {
+      position: absolute;
+      bottom: 13%;
+    }
 
     /*HOME PAGE - SECTION 1*/
     &.item-1 {
@@ -993,9 +997,9 @@
         margin: 0 0 2px 0;
       }
       button {
-        bottom: 13%;
+        //bottom: 13%;
         width: 86px;
-        margin: 0 0 3px 0;
+        margin: 0;
       }
       img {
         max-height: 100%;
@@ -1066,8 +1070,6 @@
         top: 15%;
       }
       button {
-        position: absolute;
-        bottom: 13%;
         width: 170px;
       }
     }
@@ -1093,8 +1095,6 @@
         top: 21%;
       }
       button {
-        position: absolute;
-        bottom: 13%;
         width: 115px;
       }
     }

@@ -10,6 +10,8 @@ import homepagePicFive from "../../img/homepage-pic-5.png"
 import homepagePicFiveTablet from "../../img/homepage-pic-5-tablet.png"
 import HomepageItem from "./HomepageItem/HomepageItem";
 import NavigationDots from "../../components/UI/NavigationDots/NavigationDots";
+import sliderPicOne from "../../img/slider-item-pic-1.png";
+import sliderLogoOne from "../../img/slider-item-logo-1.svg";
 
 class Homepage extends Component {
 
@@ -44,7 +46,27 @@ class Homepage extends Component {
             {
                 id: 3,
                 title: 'Nos réalisations',
-                isSliderShown: true
+                isSliderShown: true,
+                slides: [
+                    {
+                        id: 1,
+                        title: 'Innovant, la montre digitale 100% connectée',
+                        text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui.',
+                        buttonText: 'voir plus',
+                        buttonLink: '/notre-offre',
+                        logo: sliderLogoOne,
+                        image: sliderPicOne
+                    },
+                    {
+                        id: 2,
+                        title: 'Innovant, la montre digitale 200% connectée',
+                        text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui.',
+                        buttonText: 'press here',
+                        buttonLink: '/notre-offre',
+                        logo: sliderLogoOne,
+                        image: sliderPicOne
+                    }
+                ]
             },
             {
                 id: 4,
@@ -64,7 +86,7 @@ class Homepage extends Component {
                 imageTablet: homepagePicFiveTablet,
                 isButtonShown: true,
                 buttonText: 'en savoir plus',
-                buttonLink: '/notre-offre'
+                buttonLink: '/a-propos'
             },
         ]
     };
@@ -211,6 +233,7 @@ class Homepage extends Component {
                                 buttonText={section.buttonText}
                                 buttonLink={section.buttonLink}
                                 isSliderShown={section.isSliderShown}
+                                slides={section.slides}
                             />
                         )
                     }

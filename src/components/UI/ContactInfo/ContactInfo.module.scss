@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  min-width: 220px;
   span {
     font: normal normal normal 14px/1.5em Spartan;
     color: #FFFFFF;
@@ -13,7 +14,7 @@
     margin-right: 16px;
     cursor: pointer;
     &:nth-child(3) {
-      margin-left: 29px;
+      margin-left: 20px;
     }
   }
 }
@@ -28,7 +29,7 @@
       height: 34px;
       margin-right: 10px;
       &:nth-child(3) {
-        margin-left: 20px;
+        margin-left: 15px;
       }
     }
   }
@@ -37,7 +38,7 @@
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .Contact {
     span {
-      font-size: 8px;
+      font-size: 7px;
     }
     i {
       width: 20px;

@@ -1,0 +1,158 @@
+.AboutUs {
+  width: 100%;
+  //max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  color: #fff;
+  //&::-webkit-scrollbar {
+  //  position: fixed;
+  //  top: 50px;
+  //  right: 50px;
+  //  width: 1px;
+  //  max-height: 80vh;
+  //  margin-top: 10vh;
+  //  margin-right: 50px;
+  //  background-color: #fff;
+  //}
+  //
+  //&::-webkit-scrollbar-thumb {
+  //  width: 4px;
+  //  height: 500px;
+  //  background-color: #00DE81;
+  //}
+  h1 {
+    font: normal normal bold 66px/1.4697em Spartan;
+    text-align: center;
+    margin: 5% 0 5% 0;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin: 3px auto;
+    }
+  }
+}
+
+.EmployeesContainer {
+  position: relative;
+  width: 1410px;
+  height: 830px;
+  margin-top: 312px;
+  margin-bottom: calc((100vh - 830px)/2);
+}
+
+.EmployeesContainer__background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background-size: cover;
+  opacity: .5;
+}
+
+@media screen and (max-width: 1800px) {
+  .AboutUs {
+    h1 {
+      font-size: 49px;
+      &:after{
+        height: 3px;
+        width: 96px;
+      }
+    }
+  }
+  .EmployeesContainer {
+    width: 1050px;
+    height: 620px;
+    margin-top: 234px;
+    margin-bottom: calc((100vh - 620px)/2);
+  }
+  .EmployeesContainer__background {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .AboutUs {
+    h1 {
+      font-size: 43px;
+      &:after{
+        width: 85px;
+      }
+    }
+  }
+  .EmployeesContainer {
+    width: 930px;
+    height: 550px;
+    margin-top: 208px;
+    margin-bottom: calc((100vh - 550px)/2);
+  }
+  .EmployeesContainer__background {
+    width: 540px;
+    height: 540px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .AboutUs {
+    h1 {
+      display: none;
+    }
+  }
+  .EmployeesContainer {
+    width: 256px;
+    height: auto;
+    margin-top: 49px;
+    margin-bottom: 0;
+  }
+  .EmployeesContainer__background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait) {
+  .AboutUs {
+    h1 {
+      display: none;
+    }
+  }
+  .EmployeesContainer {
+    width: 512px;
+    height: auto;
+    margin-top: 98px;
+    margin-bottom: 0;
+  }
+  .EmployeesContainer__background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .EmployeesContainer {
+    width: 384px;
+    margin-top: 74px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .EmployeesContainer {
+    width: 235px;
+    margin-top: 39px;
+  }
+}
+
+@media screen and (max-width: 374px) and (orientation: portrait) {
+  .EmployeesContainer {
+    width: 201px;
+    margin-top: 34px;
+  }
+}
