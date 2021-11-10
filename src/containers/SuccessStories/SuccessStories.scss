@@ -1,0 +1,400 @@
+.SuccessStories {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Spartan', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font: normal normal bold 66px/1.4697em Spartan;
+    text-align: center;
+    margin: 0;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin: 0 auto;
+    }
+  }
+  .carousel-root {
+    width: 1260px;
+    height: 525px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 60px auto 140px auto;
+  }
+  .SliderItemContent {
+    width: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 32px;
+    padding: 40px 50px;
+  }
+  .carousel .slide > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .carousel .slide img {
+    width: auto;
+    height: 100%;
+  }
+  .carousel .slide h2 {
+    margin: 25px 0 30px 0;
+    &:after{
+      content: '';
+      display: block;
+      border: none;
+      background-color: #00DE81;
+      height: 4px;
+      width: 128px;
+      margin-top: 32px;
+    }
+  }
+  .carousel .slide p {
+    font: normal normal normal 14px/1.43em Spartan;
+    opacity: .35;
+    margin: 0 0 12px 0;
+  }
+  .carousel .slide p {
+    text-decoration: none;
+  }
+  .carousel .slide button {
+    display: none;
+  }
+  section.Portfolio__container {
+    max-width: 1315px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .SuccessStories {
+    h1 {
+      font-size: 50px;
+      &:after{
+        height: 3px;
+        width: 96px;
+      }
+    }
+    .carousel-root {
+      width: 945px;
+      height: 394px;
+      margin: 45px auto 105px auto;
+    }
+    .SliderItemContent {
+      width: 338px;
+      border-radius: 24px;
+      padding: 30px 37px;
+    }
+    .carousel .slide h2 {
+      margin: 19px 0 22px 0;
+      &:after{
+        height: 3px;
+        width: 96px;
+        margin-top: 24px;
+      }
+    }
+    .carousel .slide p {
+      font-size: 11px;
+      margin: 0 0 9px 0;
+    }
+    section.Portfolio__container {
+      max-width: 986px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .SuccessStories {
+    h1 {
+      font-size: 45px;
+      &:after{
+        width: 85px;
+      }
+    }
+    .carousel-root {
+      width: 840px;
+      height: 350px;
+      margin: 40px auto 93px auto;
+    }
+    .SliderItemContent {
+      width: 300px;
+      border-radius: 21px;
+      padding: 27px 33px;
+    }
+    .carousel .slide h2 {
+      margin: 17px 0 19px 0;
+      &:after{
+        width: 85px;
+        margin-top: 21px;
+      }
+    }
+    .carousel .slide p {
+      font-size: 10px;
+      margin: 0 0 8px 0;
+    }
+    section.Portfolio__container {
+      max-width: 876px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .SuccessStories {
+    h1 {
+      font-size: 36px;
+      &:after{
+        width: 68px;
+      }
+    }
+    .carousel-root {
+      width: 672px;
+      height: 280px;
+      margin: 32px auto 74px auto;
+    }
+    .SliderItemContent {
+      width: 240px;
+      border-radius: 17px;
+      padding: 22px 26px;
+    }
+    .carousel .slide h2 {
+      margin: 14px 0 15px 0;
+      &:after{
+        width: 68px;
+        margin-top: 17px;
+      }
+    }
+    .carousel .slide p {
+      font-size: 8px;
+      margin: 0 0 6px 0;
+    }
+    section.Portfolio__container {
+      max-width: 700px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
+  .SuccessStories {
+    section {
+      height: auto;
+      margin-top: 220px;
+    }
+    h1 {
+      font-size: 53px;
+      &:after{
+        height: 5px;
+        width: 104px;
+      }
+    }
+    .carousel-root {
+      width: 637px;
+      height: auto;
+      margin: 57px auto 0 auto;
+    }
+    .carousel .slide > div {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .carousel .slide img {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .SliderItemContent {
+      width: 100%;
+      border: none;
+      padding: 16px 44px;
+      display: flex;flex-direction: column;align-items: center;
+    }
+    .carousel .slide h2 {
+      position: relative;
+      bottom: 0;
+      width: 466px;
+      height: 169px;
+      font-size: 28px;
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 37px;
+      margin: 22px auto 25px auto;
+      padding: 17px 53px;
+      text-align: center;
+      &:after{
+        display: none;
+      }
+    }
+    .carousel .slide p {
+      position: relative;
+      bottom: 0;
+      width: 460px;
+      font-size: 28px;
+      margin: 7px auto;
+      text-align: center;
+    }
+    .carousel .slide button {
+      display: block;
+      width: 169px;
+      height: 64px;
+      font-size: 25px;
+      margin: 44px auto;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      right: 23px;
+      top: 49%
+    }
+    .carousel.carousel-slider .control-arrow.control-prev {
+      left: 23px;
+      top: 49%
+    }
+    section.Portfolio__container {
+      max-width: 637px;
+      grid-template-columns: 1fr;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .SuccessStories {
+    section {
+      margin-top: 165px;
+    }
+    h1 {
+      font-size: 40px;
+      &:after{
+        height: 4px;
+        width: 78px;
+      }
+    }
+    .carousel-root {
+      width: 478px;
+      margin: 43px auto 0 auto;
+    }
+    .SliderItemContent {
+      width: 100%;
+      padding: 12px 33px;
+    }
+    .carousel .slide i {
+      display: none;
+    }
+    .carousel .slide h2 {
+      width: 350px;
+      height: 127px;
+      font-size: 21px;
+      line-height: 1.619;
+      border-radius: 28px;
+      margin: 17px auto 19px auto;
+      padding: 13px 40px;
+    }
+    .carousel .slide p {
+      width: 345px;
+      font-size: 21px;
+      margin: 5px auto;
+    }
+    .carousel .slide button {
+      width: 127px;
+      height: 48px;
+      font-size: 19px;
+      margin: 33px auto;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      right: 17px;
+    }
+    .carousel.carousel-slider .control-arrow.control-prev {
+      left: 17px;
+    }
+    section.Portfolio__container {
+      max-width: 478px;
+      margin-top: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+  .SuccessStories {
+    section {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStories {
+    h1 {
+      font-size: 19px;
+      &:after{
+        height: 2px;
+        width: 40px;
+        margin-top: 4px;
+      }
+    }
+    .carousel-root {
+      width: 225px;
+      margin: 48px auto 0 auto;
+    }
+    .SliderItemContent {
+      width: 100%;
+      padding: 12px;
+    }
+    .carousel .slide h2 {
+      width: 165px;
+      height: 60px;
+      font-size: 10px;
+      border-radius: 8px;
+      margin: 2px auto;
+      padding: 7px 15px;
+    }
+    .carousel .slide p {
+      width: 170px;
+      font-size: 10px;
+      margin: 5px auto;
+    }
+    .carousel .slide button {
+      width: 62px;
+      height: 22px;
+      font-size: 10px;
+      margin: 19px auto;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      right: 8px;
+      top: 48%;
+    }
+    .carousel.carousel-slider .control-arrow.control-prev {
+      left: 8px;
+      top: 48%;
+    }
+    section.Portfolio__container {
+      max-width: 225px;
+      margin-top: -8px;
+    }
+  }
+}
+
+
+

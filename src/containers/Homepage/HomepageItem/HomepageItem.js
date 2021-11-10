@@ -22,8 +22,8 @@ const HomepageItem = props => {
             <div className="HomepageItem__content">
             <h2>{props.title}</h2>
             <p>{props.text}</p>
-            { props.isButtonShown ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
-            { props.isSliderShown ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
+            { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
+            { props.slides ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
             </div>
         </section>
         </CSSTransition>

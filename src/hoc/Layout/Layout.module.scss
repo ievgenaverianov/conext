@@ -119,6 +119,23 @@
   }
 }
 
+@media screen and (max-width: 1439px) {
+  .Layout{
+    .ContextLogo {
+      top: 32px;
+      left: 39px;
+      width: 140px;
+      height: 53px;
+    }
+    .PhoneButton {
+      bottom: 33px;
+      right: 39px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .Layout{
     .Language {

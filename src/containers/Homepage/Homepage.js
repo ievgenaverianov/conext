@@ -32,7 +32,6 @@ class Homepage extends Component {
                 text: 'Conext est une agence spécialisée dans le développement d’applications mobiles et solutions numériques innovantes.',
                 image: homepagePicOne,
                 imageTablet: homepagePicOneTablet,
-                isButtonShown: true,
                 buttonText: 'voir plus',
                 buttonLink: '/notre-offre'
             },
@@ -46,7 +45,6 @@ class Homepage extends Component {
             {
                 id: 3,
                 title: 'Nos réalisations',
-                isSliderShown: true,
                 slides: [
                     {
                         id: 1,
@@ -74,7 +72,6 @@ class Homepage extends Component {
                 text: 'Suivez l’avancement de votre projet en temps réel grâce à notre interface de suivi personnalisée.',
                 image: homepagePicFour,
                 imageTablet: homepagePicFourTablet,
-                isButtonShown: true,
                 buttonText: 'découvrir nos offres',
                 buttonLink: '/notre-offre'
             },
@@ -84,7 +81,6 @@ class Homepage extends Component {
                 text: 'Notre équipe est composée d’experts pluridisciplinaires passionnés par le développement et l’innovation. Notre mission : tout mettre en oeuvre pour donner vie à vos projets.',
                 image: homepagePicFive,
                 imageTablet: homepagePicFiveTablet,
-                isButtonShown: true,
                 buttonText: 'en savoir plus',
                 buttonLink: '/a-propos'
             },
@@ -229,10 +225,8 @@ class Homepage extends Component {
                                 text={section.text}
                                 image={section.image}
                                 imageTablet={section.imageTablet}
-                                isButtonShown={section.isButtonShown}
                                 buttonText={section.buttonText}
                                 buttonLink={section.buttonLink}
-                                isSliderShown={section.isSliderShown}
                                 slides={section.slides}
                             />
                         )

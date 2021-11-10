@@ -27,7 +27,7 @@ class Offers extends Component {
                 text: 'Je suis avant tout un passionné de sport. Je recharge mon énergie grâce à la course à pied, ' +
                     'le golf et le crossfit ! Créateur dans l’âme, j’adore faire émerger de nouveaux projets et ' +
                     'logiciels. Diplômé d’école d’ingénieur et de management, j’ai acquis de l’expérience au sein ' +
-                    'd’entreprises dans les domaines du développement informatique et de l’innovation. Aujourd’hui ' +
+                    'd’entreprises dans les domaines du développement informatique et de l’innovation. \n Aujourd’hui ' +
                     'je mets à contribution mon énergie et mon savoir-faire pour la réalisation de vos solutions ' +
                     'numériques. Hâte de vous rencontrer autour d’un café pour parler de votre projet !',
                 image: employeePicOne,

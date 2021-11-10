@@ -5,12 +5,14 @@ import Homepage from "./containers/Homepage/Homepage";
 import Offers from "./containers/Offers/Offers";
 import Contact from "./containers/Contact/Contact";
 import AboutUs from "./containers/AboutUs/AboutUs";
+import SuccessStories from "./containers/SuccessStories/SuccessStories";
 
 class App extends Component{
     render() {
         return (
             <Layout>
                 <Switch>
+                    <Route path="/success-story" component={SuccessStories}/>
                     <Route path="/a-propos" component={AboutUs}/>
                     <Route path="/notre-offre" component={Offers}/>
                     <Route path="/contact" component={Contact}/>

@@ -11,7 +11,7 @@ const SliderItem = props => {
                 <i style={{backgroundImage: 'url(' + props.logo + ')'}}/>
                 <h2>{props.title}</h2>
                 <p>{props.text}</p>
-                <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink>
+                { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
             </div>
             <img src={props.image} alt="slider-pic"/>
         </div>
