@@ -1,13 +1,15 @@
 .Offers {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Spartan', sans-serif;
   color: #fff;
-  margin: -40px 0 0 0;
+  //margin: -40px 0 0 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   h1 {
@@ -25,10 +27,10 @@
   }
   a {
     text-decoration: none;
+    margin-top: 30px;
   }
   button {
     width: 450px;
-    margin-top: 30px;
   }
 }
 
@@ -59,7 +61,7 @@
 
 @media screen and (max-width: 1800px) {
   .Offers {
-    margin: -30px 0 0 0;
+    //margin: -30px 0 0 0;
     h1 {
       font-size: 49px;
       &:after{
@@ -67,9 +69,11 @@
         width: 96px;
       }
     }
+    a {
+      margin-top: 22px;
+    }
     button {
       width: 337px;
-      margin-top: 22px;
     }
   }
   .GreenLines {
@@ -80,16 +84,18 @@
 
 @media screen and (max-width: 1439px) {
   .Offers {
-    margin: -27px 0 0 0;
+    //margin: -27px 0 0 0;
     h1 {
       font-size: 44px;
       &:after{
         width: 85px;
       }
     }
+    a {
+      margin-top: 20px;
+    }
     button {
       width: 299px;
-      margin-top: 20px;
     }
   }
   .GreenLines {
@@ -100,7 +106,7 @@
 
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .Offers {
-    margin: -12px 0 0 0;
+    //margin: -12px 0 0 0;
     h1 {
       font-size: 20px;
       &:after{
@@ -108,9 +114,11 @@
         height: 2px;
       }
     }
+    a {
+      margin-top: 10px;
+    }
     button {
       width: 133px;
-      margin-top: 10px;
       font-size: 9px;
     }
   }
@@ -122,6 +130,7 @@
 
 @media screen and (max-width: 1279px) and (orientation: portrait) {
   .Offers {
+    height: auto;
     justify-content: flex-start;
     margin: 172px 0 0 0;
     h1 {
@@ -131,9 +140,11 @@
         height: 5px;
       }
     }
+    a {
+      margin: 12px 0 169px 0;
+    }
     button {
       width: 412px;
-      margin: 12px 0 169px 0;
       font-size: 24px;
     }
   }
@@ -156,9 +167,11 @@
         height: 4px;
       }
     }
+    a {
+      margin: 10px 0 135px 0;
+    }
     button {
       width: 330px;
-      margin: 10px 0 135px 0;
       font-size: 19px;
     }
   }
@@ -178,11 +191,13 @@
         margin-top: 4px;
       }
     }
+    a {
+      margin: -1px 0 54px 0;
+    }
     button {
       position: relative;
       width: 238px;
       height: 44px;
-      margin: -1px 0 158px 0;
       font-size: 12px;
     }
   }
@@ -203,7 +218,6 @@
     button {
       width: 203px;
       height: 38px;
-      margin: -1px 0 135px 0;
       font-size: 10px;
     }
   }

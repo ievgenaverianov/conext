@@ -6,6 +6,7 @@ import offersPicThree from "../../img/offers-pic-3.png"
 import OffersItem from "./OffersItem/OffersItem";
 import {NavLink} from "react-router-dom";
 import Button from "../../components/UI/Button/Button";
+import Footer from "../../components/Navigation/Footer/Footer";
 
 class Offers extends Component {
 
@@ -35,25 +36,28 @@ class Offers extends Component {
     render() {
 
         return (
-            <div className={classes.Offers}>
-                <h1>Nos offres</h1>
-                <div className={classes.OffersContent}>
-                    {this.state.sections.map(section => {
-                            return (
-                                <OffersItem
-                                    key={section.id}
-                                    id={section.id}
-                                    title={section.title}
-                                    text={section.text}
-                                    image={section.image}
-                                />
-                            )
-                        }
-                    )}
+            <>
+                <div className={classes.Offers}>
+                    <h1>Nos offres</h1>
+                    <div className={classes.OffersContent}>
+                        {this.state.sections.map(section => {
+                                return (
+                                    <OffersItem
+                                        key={section.id}
+                                        id={section.id}
+                                        title={section.title}
+                                        text={section.text}
+                                        image={section.image}
+                                    />
+                                )
+                            }
+                        )}
+                    </div>
+                    <div className={classes.GreenLines} />
+                    <NavLink to='/contact'><Button>obtenir un devis gratuit</Button></NavLink>
                 </div>
-                <div className={classes.GreenLines} />
-                <NavLink to='/contact'><Button>obtenir un devis gratuit</Button></NavLink>
-            </div>
+                <Footer/>
+            </>
         )
     }
 }
