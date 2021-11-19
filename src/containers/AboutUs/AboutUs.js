@@ -6,6 +6,7 @@ import employeePicTwo from "../../img/employee-pic-2.png"
 import employeeBg from "../../img/employee-bg.svg"
 import AboutUsInfo from "./AboutUsInfo/AboutUsInfo";
 import Employee from "./Employee/Employee";
+import Footer from "../../components/Navigation/Footer/Footer";
 
 class Offers extends Component {
 
@@ -52,29 +53,34 @@ class Offers extends Component {
 
         return (
             <div className={classes.AboutUs}>
-                <h1>Qui sommes nous ?</h1>
-                <AboutUsInfo
-                    title={this.state.info.title}
-                    text={this.state.info.text}
-                    image={this.state.info.image}
-                />
-                <div className={classes.EmployeesContainer}>
-                    <div className={classes.EmployeesContainer__background} style={{backgroundImage: 'url(' + employeeBg + ')'}}/>
-                    {this.state.employees.map(employee => {
-                            return (
-                                <Employee
-                                    key={employee.id}
-                                    id={employee.id}
-                                    name={employee.name}
-                                    position={employee.position}
-                                    text={employee.text}
-                                    image={employee.image}
-                                    iconLink={employee.linkedInLink}
-                                />
-                            )
-                        }
-                    )}
-                </div>
+                <section>
+                    <h1>Qui sommes nous ?</h1>
+                    <AboutUsInfo
+                        title={this.state.info.title}
+                        text={this.state.info.text}
+                        image={this.state.info.image}
+                    />
+                </section>
+                <section>
+                    <div className={classes.EmployeesContainer}>
+                        <div className={classes.EmployeesContainer__background} style={{backgroundImage: 'url(' + employeeBg + ')'}}/>
+                        {this.state.employees.map(employee => {
+                                return (
+                                    <Employee
+                                        key={employee.id}
+                                        id={employee.id}
+                                        name={employee.name}
+                                        position={employee.position}
+                                        text={employee.text}
+                                        image={employee.image}
+                                        iconLink={employee.linkedInLink}
+                                    />
+                                )
+                            }
+                        )}
+                    </div>
+                </section>
+                <Footer/>
             </div>
         )
     }

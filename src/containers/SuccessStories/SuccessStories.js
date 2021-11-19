@@ -10,6 +10,7 @@ import portfolioPicFive from "../../img/potfolio-pic-5.png";
 import portfolioPicSix from "../../img/potfolio-pic-6.png";
 import Slider from "../../components/UI/Slider/Slider";
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
+import Footer from "../../components/Navigation/Footer/Footer";
 
 class SuccessStories extends Component {
 
@@ -23,7 +24,7 @@ class SuccessStories extends Component {
                 logo: sliderLogoOne,
                 image: sliderPicOne,
                 buttonText: 'voir',
-                buttonLink: '/'
+                buttonLink: '#'
             },
             {
                 id: 2,
@@ -33,7 +34,7 @@ class SuccessStories extends Component {
                 logo: sliderLogoOne,
                 image: sliderPicOne,
                 buttonText: 'voir',
-                buttonLink: '/'
+                buttonLink: '#'
             }
         ],
         portfolio: [
@@ -41,37 +42,37 @@ class SuccessStories extends Component {
                 id: 1,
                 title: 'E-App mobile',
                 image: portfolioPicOne,
-                link:''
+                link:'#'
             },
             {
                 id: 2,
                 title: 'Digital',
                 image: portfolioPicTwo,
-                link:''
+                link:'#'
             },
             {
                 id: 3,
                 title: 'Innovant 2',
                 image: portfolioPicThree,
-                link:''
+                link:'#'
             },
             {
                 id: 4,
                 title: 'New appli',
                 image: portfolioPicFour,
-                link:''
+                link:'#'
             },
             {
                 id: 5,
                 title: 'Innovant',
                 image: portfolioPicFive,
-                link:''
+                link:'#'
             },
             {
                 id: 6,
                 title: 'Your App',
                 image: portfolioPicSix,
-                link:''
+                link:'#'
             }
         ]
     };
@@ -97,6 +98,7 @@ class SuccessStories extends Component {
                         )
                     })}
                 </section>
+                <Footer/>
             </div>
         )
     }

@@ -12,6 +12,7 @@ import HomepageItem from "./HomepageItem/HomepageItem";
 import NavigationDots from "../../components/UI/NavigationDots/NavigationDots";
 import sliderPicOne from "../../img/slider-item-pic-1.png";
 import sliderLogoOne from "../../img/slider-item-logo-1.svg";
+import Footer from "../../components/Navigation/Footer/Footer";
 
 class Homepage extends Component {
 
@@ -25,6 +26,7 @@ class Homepage extends Component {
         prevTouchY: 0,
         deltaY: 0,
         beingTouched: false,
+        showFooter: false,
         sections: [
             {
                 id: 1,
@@ -92,15 +94,22 @@ class Homepage extends Component {
 
         if (this.state.canBeScrolled) {
             if (e.deltaY > 0) {
-                if (this.state.activeSection < this.state.sections.length) {
+                if (this.state.activeSection <  this.state.sections.length) {
                     this.setState({
                         activeSection: this.state.activeSection + 1,
                     })
+                    if (this.state.activeSection === this.state.sections.length - 1) {
+                        setTimeout(() => this.setState({
+                            showFooter: !this.state.showFooter
+                        }), 2000)
+                    }
+                    console.log(this.state.activeSection)
                 }
             } else {
                 if (this.state.activeSection > 1) {
                     this.setState({
                         activeSection: this.state.activeSection - 1,
+                        showFooter: false
                     })
                 }
             }
@@ -164,6 +173,7 @@ class Homepage extends Component {
                 deltaX: 0,
                 deltaY: 0,
                 beingTouched: false,
+                showFooter: false
             });
         } else if (this.state.deltaY < -20 && (Math.abs(this.state.deltaX) < Math.abs(this.state.deltaY)) && this.state.activeSection < this.state.sections.length) {
             this.setState({
@@ -174,9 +184,14 @@ class Homepage extends Component {
                 deltaY: 0,
                 beingTouched: false,
             });
+            if (this.state.activeSection === this.state.sections.length - 1) {
+                setTimeout(() => this.setState({
+                    showFooter: !this.state.showFooter
+                }), 2000)
+            }
         }
-        console.log('deltaX=', this.state.deltaX)
-        console.log('deltaY=', this.state.deltaY)
+        // console.log('deltaX=', this.state.deltaX)
+        // console.log('deltaY=', this.state.deltaY)
     }
 
     // onBtnClickHandler = () => {
@@ -204,50 +219,54 @@ class Homepage extends Component {
     render() {
 
         return (
-            <div className={classes.Homepage}
-                 onWheel={this.onScrollEventHandler}
-                 onTouchStart={(window.screen.width < 1279) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
-                 onTouchMove={(window.screen.width < 1279) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
-                 onTouchEnd={(window.screen.width < 1279) ? () => this.handleTouchEnd() : null}
+            <>
+                <div className={classes.Homepage}
+                     onWheel={this.onScrollEventHandler}
+                     onTouchStart={(window.screen.width < 1279) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
+                     onTouchMove={(window.screen.width < 1279) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
+                     onTouchEnd={(window.screen.width < 1279) ? () => this.handleTouchEnd() : null}
 
-                // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
-                // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
-                // onMouseUp={() => this.handleMouseUp()}
-                // onMouseLeave={() => this.handleMouseLeave()}
-            >
-                {this.state.sections.map(section => {
-                        return (
-                            <HomepageItem
-                                key={section.id}
-                                id={section.id}
-                                isActive={section.id === this.state.activeSection}
-                                title={section.title}
-                                text={section.text}
-                                image={section.image}
-                                imageTablet={section.imageTablet}
-                                buttonText={section.buttonText}
-                                buttonLink={section.buttonLink}
-                                slides={section.slides}
-                            />
-                        )
-                    }
-                )}
-
-                { <ul className={classes.NavigationDots}>
+                    // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
+                    // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
+                    // onMouseUp={() => this.handleMouseUp()}
+                    // onMouseLeave={() => this.handleMouseLeave()}
+                >
                     {this.state.sections.map(section => {
                             return (
-                                <NavigationDots
+                                <HomepageItem
                                     key={section.id}
                                     id={section.id}
                                     isActive={section.id === this.state.activeSection}
-                                    onDotClick={this.onDotClickHandler}
+                                    title={section.title}
+                                    text={section.text}
+                                    image={section.image}
+                                    imageTablet={section.imageTablet}
+                                    buttonText={section.buttonText}
+                                    buttonLink={section.buttonLink}
+                                    slides={section.slides}
                                 />
                             )
                         }
                     )}
-                </ul> }
 
-            </div>
+                    { <ul className={classes.NavigationDots}>
+                        {this.state.sections.map(section => {
+                                return (
+                                    <NavigationDots
+                                        key={section.id}
+                                        id={section.id}
+                                        isActive={section.id === this.state.activeSection}
+                                        onDotClick={this.onDotClickHandler}
+                                    />
+                                )
+                            }
+                        )}
+                    </ul> }
+                </div>
+
+                { this.state.showFooter ?
+                    <Footer /> : null }
+            </>
         )
     }
 }
