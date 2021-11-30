@@ -16,16 +16,16 @@ const HomepageItem = props => {
             timeout={2000}
             classNames="hpi"
         >
-        <section className={cssClasses}>
-            { (props.image && window.screen.width <= 1279 && window.innerHeight > window.innerWidth) ? <img src={props.imageTablet} alt="homepage-pic"/> :
-              (props.image && window.innerHeight < window.innerWidth) ? <img src={props.image} alt="homepage-pic"/> : null }
-            <div className="HomepageItem__content">
-            <h2>{props.title}</h2>
-            <p>{props.text}</p>
-            { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
-            { props.slides ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
-            </div>
-        </section>
+            <section className={cssClasses}>
+                { (props.image && window.innerWidth <= 1279 && window.innerHeight > window.innerWidth) ? <img src={props.imageTablet} alt="homepage-pic"/> :
+                    (props.image && window.innerHeight < window.innerWidth) ? <img src={props.image} alt="homepage-pic"/> : null }
+                <div className="HomepageItem__content">
+                    <h2>{props.title}</h2>
+                    <p>{props.text}</p>
+                    { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
+                    { props.slides ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
+                </div>
+            </section>
         </CSSTransition>
     )
 }

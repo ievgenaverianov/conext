@@ -1,7 +1,8 @@
-.Blog {
+.avy-blog {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +10,8 @@
   font-family: 'Spartan', sans-serif;
   color: #fff;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
-
+  padding: calc((100vh - 773px)/2) 0;
   h1 {
     font: normal normal bold 66px/1.4697em Spartan;
     text-align: center;
@@ -28,7 +28,7 @@
     }
   }
 }
-.Categories {
+.avy-blog__categories {
   width: 1470px;
   display: flex;
   justify-content: left;
@@ -57,18 +57,30 @@
     color: rgba(255, 255, 255, .5);
     background: rgba(0, 222, 129, 0.1);
     margin: 0 8px;
+    &.active {
+      color: #00de81;
+    }
   }
 }
 
-.Articles {
+.avy-blog__articles {
+  position: relative;
   width: 1470px;
-  height: 580px;
-  display: flex;
-  justify-content: space-between;
+  height: auto;
+  .avy-blog__articles-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
 }
 
+
 @media screen and (max-width: 1800px) {
-  .Blog {
+  .avy-blog {
+    padding: calc((100vh - 578px)/2) 0;
     h1 {
       font-size: 49px;
       &:after {
@@ -77,7 +89,7 @@
       }
     }
   }
-  .Categories {
+  .avy-blog__categories {
     width: 1102px;
     margin: 22px 0;
     font-size: 10px;
@@ -92,14 +104,18 @@
       margin: 0 6px;
     }
   }
-  .Articles {
+  .avy-blog__articles {
     width: 1102px;
-    height: 435px;
+    .avy-blog__articles-wrapper {
+      grid-column-gap: 22px;
+      grid-row-gap: 22px;
+    }
   }
 }
 
 @media screen and (max-width: 1439px) {
-  .Blog {
+  .avy-blog {
+    padding: calc((100vh - 511px)/2) 0;
     h1 {
       font-size: 43px;
       &:after {
@@ -108,7 +124,7 @@
       }
     }
   }
-  .Categories {
+  .avy-blog__categories {
     width: 980px;
     margin: 19px 0;
     font-size: 9px;
@@ -123,14 +139,18 @@
       margin: 0 5px;
     }
   }
-  .Articles {
+  .avy-blog__articles {
     width: 980px;
-    height: 386px;
+    .avy-blog__articles-wrapper {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
   }
 }
 
 @media screen and (max-width: 1279px) {
-  .Blog {
+  .avy-blog {
+    padding: calc((100vh - 412px)/2) 0;
     h1 {
       font-size: 35px;
       &:after {
@@ -139,7 +159,7 @@
       }
     }
   }
-  .Categories {
+  .avy-blog__categories {
     width: 784px;
     margin: 15px 0;
     font-size: 7px;
@@ -154,15 +174,25 @@
       margin: 0 4px;
     }
   }
-  .Articles {
+  .avy-blog__articles {
     width: 784px;
-    height: 309px;
+    //height: 309px;
+    .avy-blog__articles-wrapper {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
   }
 }
 
 @media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
-  .Blog {
+  .avy-blog {
     height: auto;
+    padding: 0;
+    justify-content: flex-start;
+    .avy-blog__articles-wrapper {
+      height: auto;
+      display: block;
+    }
     h1 {
       font-size: 52px;
       margin-top: 220px;
@@ -173,7 +203,7 @@
       }
     }
   }
-  .Categories {
+  .avy-blog__categories {
     width: 640px;
     margin: 58px 0 42px 0;
     font-size: 18px;
@@ -188,15 +218,15 @@
       margin: 0 0 0 21px;
     }
   }
-  .Articles {
+  .avy-blog__articles {
     width: 640px;
     height: auto;
-    flex-direction: column;
+    display: block;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .Blog {
+  .avy-blog {
     h1 {
       font-size: 39px;
       margin-top: 165px;
@@ -207,7 +237,7 @@
       }
     }
   }
-  .Categories {
+  .avy-blog__categories {
     width: 480px;
     margin: 44px 0 32px 0;
     font-size: 14px;
@@ -222,11 +252,42 @@
       margin: 0 0 0 16px;
     }
   }
-  .Articles {
+  .avy-blog__articles {
     width: 480px;
   }
 }
 
-@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {}
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+  .avy-blog {
+    h1 {
+      font-size: 19px;
+      margin-top: 60px;
+      &:after {
+        height: 2px;
+        width: 40px;
+        margin-top: 4px;
+      }
+    }
+  }
+  .avy-blog__categories {
+    width: 275px;
+    margin: 27px 0 18px 0;
+    font-size: 7px;
+    span {
+      margin-right: 8px;
+      margin-top: 4px;
+    }
+    button {
+      width: 64px;
+      height: 18px;
+      font-size: 7px;
+      margin: 0 0 0 9px;
+      padding: 0;
+    }
+  }
+  .avy-blog__articles {
+    width: 275px;
+  }
+}
 
 @media screen and (max-width: 767px) {}

@@ -6,16 +6,19 @@ import {NavLink} from "react-router-dom";
 
 const BlogItem = props => {
 
+    let cssClasses = `avy-blogItem`;
+    if (props.isHidden) cssClasses += ` hidden`;
+
     return (
-        <div className={`BlogItem item-${props.id}`}>
+        <div className={cssClasses}>
             <NavLink to={props.link}>
                 <img src={props.image} alt="blog-pic"/>
-                <div className="BlogItem__content__wrapper" style={{backgroundImage: 'url(' + contentFrame + ')'}}>
-                    <div className="BlogItem__content">
+                <div className="avy-blogItem__content__wrapper" style={{backgroundImage: 'url(' + contentFrame + ')'}}>
+                    <div className="avy-blogItem__content">
                         <h2>{props.title}</h2>
-                        <span className="BlogItem__category">{props.category}</span>
-                        <span className="BlogItem__date">{props.date}</span>
-                        <span className="BlogItem__cta">Lire l’article</span>
+                        <span className="avy-blogItem__category">{props.category}</span>
+                        <span className="avy-blogItem__date">{props.date}</span>
+                        <span className="avy-blogItem__cta">Lire l’article</span>
                         <i style={{backgroundImage: 'url(' + rightArrow + ')'}} />
                     </div>
                 </div>
