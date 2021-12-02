@@ -9,7 +9,7 @@
   align-items: center;
   background: transparent linear-gradient(270deg, #000A00 0%, #081326 100%) 0% 0% no-repeat padding-box;
   border-top: 1px solid rgba(255, 255, 255, .5);
-  z-index: 200;
+  z-index: 110;
   padding: 0 61px;
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
@@ -41,7 +41,7 @@
     }
     ul {
       position: relative;
-      height: 88px;
+      height: 90px;
       width: 230px;
       display: flex;
       flex-direction: column;

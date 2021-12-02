@@ -16,7 +16,6 @@
     font: normal normal bold 66px/1.4697em Spartan;
     text-align: center;
     margin: 0;
-
     &:after {
       content: '';
       display: block;
@@ -51,7 +50,6 @@
   button {
     width: 105px;
     height: 30px;
-    font-size: 14px;
     border: none;
     font: normal normal normal 14px/30px Spartan;
     color: rgba(255, 255, 255, .5);
@@ -189,6 +187,7 @@
     height: auto;
     padding: 0;
     justify-content: flex-start;
+    margin-bottom: 100px;
     .avy-blog__articles-wrapper {
       height: auto;
       display: block;
@@ -289,5 +288,3 @@
     width: 275px;
   }
 }
-
-@media screen and (max-width: 767px) {}

@@ -7,12 +7,14 @@ import Contact from "./containers/Contact/Contact";
 import AboutUs from "./containers/AboutUs/AboutUs";
 import SuccessStories from "./containers/SuccessStories/SuccessStories";
 import Blog from "./containers/Blog/Blog";
+import BlogArticle from "./containers/Blog/BlogArticle/BlogArticle";
 
 class App extends Component{
     render() {
         return (
             <Layout>
                 <Switch>
+                    <Route path="/blog/article" component={BlogArticle}/>
                     <Route path="/blog" component={Blog}/>
                     <Route path="/success-story" component={SuccessStories}/>
                     <Route path="/a-propos" component={AboutUs}/>

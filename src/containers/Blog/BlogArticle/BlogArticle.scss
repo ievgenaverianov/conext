@@ -1,0 +1,425 @@
+.avy-blog-article {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Spartan', sans-serif;
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+  h2 {
+    font: normal normal bold 38px/1.368em Spartan;
+  }
+  h3 {
+    font: normal normal bold 28px/1.07em Spartan;
+    margin: 45px 0;
+  }
+  h4 {
+    font: normal normal normal 18px/1.67 Spartan;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+  }
+  p, span {
+    font: normal normal normal 18px/2em Spartan;
+    color: rgba(255, 255, 255, .35)
+  }
+  button {
+    width: 105px;
+    height: 30px;
+    border: none;
+    font: normal normal normal 14px/30px Spartan;
+    color: rgba(255, 255, 255, .5);
+    background: rgba(0, 222, 129, 0.1);
+    margin: 0 8px;
+  }
+  .avy-blog-article__main-section {
+    width: 1663px;
+    display: flex;
+    justify-content: space-between;
+    margin: calc((100vh - 615px)/2) 0;
+    img {
+      width: 780px;
+      height: auto;
+    }
+    .avy-main-section__content {
+      width: 823px;
+      span {
+        display: block;
+        line-height: 1.2;
+      }
+      h2 {
+        width: 67%;
+        margin: 37px 0 78px 0;
+      }
+      p {
+        margin: 36px 0 0 0;
+      }
+    }
+  }
+
+  .avy-blog-article__second-section {
+    width: 690px;
+    h3:first-child {
+      font: normal normal bold 38px/1.368em Spartan;
+      &:after {
+        content: '';
+        display: block;
+        border: none;
+        background-color: #00DE81;
+        height: 4px;
+        width: 128px;
+        margin-top: 50px;
+      }
+    }
+    span {
+      font: normal normal normal 14px/1.5em Spartan;
+      color: rgba(255, 255, 255, .75)
+    }
+  }
+  .avy-similar-articles-wrapper {
+    width: 735px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .avy-blog-article {
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 21px;
+      margin: 25px 0;
+    }
+    h4, p, span {
+      font-size: 14px;
+    }
+    button {
+      width: 90px;
+      height: 25px;
+      font-size: 12px;
+    }
+    .avy-blog-article__main-section {
+      width: 1250px;
+      margin: calc((100vh - 460px)/2) 0;
+      img {
+        width: 585px;
+      }
+      .avy-main-section__content {
+        width: 617px;
+        h2 {
+          margin: 27px 0 58px 0;
+        }
+        p {
+          margin: 17px 0 0 0;
+        }
+      }
+    }
+    .avy-blog-article__second-section {
+      width: 550px;
+      h3:first-child {
+        font-size: 30px;
+        &:after {
+          height: 3px;
+          width: 96px;
+          margin-top: 40px;
+        }
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .avy-similar-articles-wrapper {
+      width: 560px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .avy-blog-article {
+    h2 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 21px 0;
+    }
+    h4, p, span {
+      font-size: 13px;
+    }
+    button {
+      width: 80px;
+      height: 21px;
+      font-size: 11px;
+    }
+    .avy-blog-article__main-section {
+      width: 1110px;
+      margin: calc((100vh - 410px)/2) 0;
+      img {
+        width: 520px;
+      }
+      .avy-main-section__content {
+        width: 550px;
+        h2 {
+          margin: 24px 0 50px 0;
+        }
+        p {
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+    .avy-blog-article__second-section {
+      width: 490px;
+      h3:first-child {
+        font-size: 27px;
+        &:after {
+          height: 3px;
+          width: 85px;
+          margin-top: 35px;
+        }
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+    .avy-similar-articles-wrapper {
+      width: 500px;
+      margin-bottom: 53px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .avy-blog-article {
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 14px;
+      margin: 17px 0;
+    }
+    h4, p, span {
+      font-size: 11px;
+    }
+    button {
+      width: 65px;
+      height: 17px;
+      font-size: 10px;
+    }
+    .avy-blog-article__main-section {
+      width: 890px;
+      margin: calc((100vh - 333px)/2) 0;
+      img {
+        width: 420px;
+      }
+      .avy-main-section__content {
+        width: 440px;
+        h2 {
+          margin: 19px 0 40px 0;
+        }
+        p {
+          margin: 12px 0 0 0;
+        }
+      }
+    }
+    .avy-blog-article__second-section {
+      width: 395px;
+      h3:first-child {
+        font-size: 21px;
+        //&:after {
+        //  height: 3px;
+        //  width: 85px;
+        //  margin-top: 35px;
+        //}
+      }
+      span {
+        font-size: 10px;
+      }
+    }
+    .avy-similar-articles-wrapper {
+      width: 400px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
+  .avy-blog-article {
+    h2 {
+      font-size: 26px;
+      &:after {
+        content: '';
+        display: block;
+        border: none;
+        background-color: #00DE81;
+        height: 4px;
+        width: 104px;
+        margin: 18px auto;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      margin: 60px 0;
+    }
+    h4 {
+      font-size: 26px;
+    }
+    p, span {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    button {
+      width: 140px;
+      height: 40px;
+      font-size: 18px;
+    }
+    .avy-blog-article__main-section {
+      position: relative;
+      width: 640px;
+      margin: 186px 0 0 0;
+      img {
+        position: absolute;
+        top: 285px;
+        left: 0;
+        width: 100%;
+      }
+      .avy-main-section__content {
+        width: 597px;
+        margin: 0 auto;
+        span {
+          text-align: center;
+          margin-top: 5px;
+        }
+        h2 {
+          width: 64%;
+          text-align: center;
+          line-height: 1.7;
+          margin: 34px auto 550px auto;
+        }
+        p {
+          margin: 31px 0 0 0;
+        }
+      }
+    }
+
+    .avy-blog-article__second-section {
+      width: 597px;
+      margin: 0 auto;
+      h3:first-child {
+        font-size: 26px;
+        line-height: 1.14;
+        margin: 26px 0 49px 0;
+        &:after {
+          height: 3px;
+          width: 105px;
+          margin-top: 10px;
+        }
+      }
+      p {
+        margin: 30px 0 0 0;
+      }
+      span {
+        display: inline-block;
+        font-size: 18px;
+        margin-top: 33px;
+      }
+      & > h4 {
+        width: 66%;
+        line-height: 1.14;
+        margin: 53px 0 69px 0;
+        text-align: left;
+      }
+    }
+    .avy-similar-articles-wrapper {
+      width: 597px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .avy-blog-article {
+    h2 {
+      font-size: 20px;
+      &:after {
+        width: 78px;
+        margin: 14px auto;
+      }
+    }
+    h3 {
+      font-size: 14px;
+      margin: 45px 0;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    p, span {
+      font-size: 14px;
+    }
+    button {
+      width: 105px;
+      height: 30px;
+      font-size: 14px;
+    }
+    .avy-blog-article__main-section {
+      width: 480px;
+      margin: 140px 0 0 0;
+      img {
+        top: 214px;
+      }
+      .avy-main-section__content {
+        width: 448px;
+        span {
+          margin-top: 4px;
+        }
+        h2 {
+          margin: 26px auto 412px auto;
+        }
+        p {
+          margin: 23px 0 0 0;
+        }
+      }
+    }
+
+    .avy-blog-article__second-section {
+      width: 448px;
+      h3:first-child {
+        font-size: 20px;
+        margin: 20px 0 37px 0;
+        &:after {
+          height: 3px;
+          width: 79px;
+          margin-top: 8px;
+        }
+      }
+      p {
+        margin: 23px 0 0 0;
+      }
+      span {
+        font-size: 14px;
+        margin-top: 25px;
+      }
+      & > h4 {
+        margin: 40px 0 52px 0;
+      }
+    }
+    .avy-similar-articles-wrapper {
+      width: 448px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {}
+

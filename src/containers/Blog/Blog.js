@@ -30,7 +30,7 @@ class Blog extends Component {
                 category: categories[0],
                 date: '15.06.2021',
                 image: blogPicTwo,
-                articleLink: '#'
+                articleLink: '/blog/article'
             },
             {
                 id: 3,
