@@ -40,8 +40,8 @@ const Footer = () => {
             </div>
             <div className="Footer__info">
                 <div className="Footer__links">
-                    <NavLink to='/'>Mentions légales</NavLink>
-                    <NavLink to='/'>CGV</NavLink>
+                    <NavLink to='/legal-disclaimer'>Mentions légales</NavLink>
+                    <NavLink to='/general-conditions'>CGV</NavLink>
                 </div>
                 <span>Copyright © 2021 CONEXT - Tous droits réservés</span>
                 <div className="Footer__design">

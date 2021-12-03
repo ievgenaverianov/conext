@@ -84,7 +84,7 @@
 @media screen and (max-width: 1279px) {
   .avy-similar-article {
     width: 195px;
-    height: 110px;
+    height: 130px;
     border-radius: 17px;
     padding: 13px 15px;
     .avy-similar-article__date {
@@ -152,4 +152,26 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {}
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+  .avy-similar-article {
+    width: 196px;
+    height: 104px;
+    border-radius: 8px;
+    padding: 19px 16px;
+    margin-bottom: 18px;
+    .avy-similar-article__date {
+      left: 18px;
+      bottom: 18px;
+    }
+    .avy-similar-article__cta {
+      right: 42px;
+      bottom: 18px;
+    }
+    i {
+      right: 14px;
+      bottom: 14px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

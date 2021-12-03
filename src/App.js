@@ -8,12 +8,17 @@ import AboutUs from "./containers/AboutUs/AboutUs";
 import SuccessStories from "./containers/SuccessStories/SuccessStories";
 import Blog from "./containers/Blog/Blog";
 import BlogArticle from "./containers/Blog/BlogArticle/BlogArticle";
+import LegalDisclaimer from "./containers/LegalDisclaimer/LegalDisclaimer";
+import GeneralConditions from "./containers/GeneralConditions/GeneralConditions";
 
 class App extends Component{
+
     render() {
         return (
             <Layout>
                 <Switch>
+                    <Route path="/general-conditions" component={GeneralConditions}/>
+                    <Route path="/legal-disclaimer" component={LegalDisclaimer}/>
                     <Route path="/blog/article" component={BlogArticle}/>
                     <Route path="/blog" component={Blog}/>
                     <Route path="/success-story" component={SuccessStories}/>
