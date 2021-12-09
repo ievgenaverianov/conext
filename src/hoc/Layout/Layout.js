@@ -8,11 +8,13 @@ import igLogo from "../../img/instagram.svg"
 import lnLogo from "../../img/linkedin-grey.svg"
 import phoneButton from "../../img/phone-btn.svg";
 import {NavLink} from "react-router-dom";
+import CallPopup from "../../components/UI/CallPopup/CallPopup";
 
 class Layout extends Component {
 
     state = {
-        menu: false
+        menu: false,
+        callPopup: false
     }
 
     toggleMenuHandler = () => {
@@ -27,9 +29,21 @@ class Layout extends Component {
         })
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
+    onClickPopupHandler = () => {
+        this.setState({
+            callPopup: !this.state.callPopup
+        })
     }
+
+    popupCloseHandler = () => {
+        this.setState({
+            callPopup: false
+        })
+    }
+    //
+    // componentDidMount() {
+    //     window.scrollTo(0, 0)
+    // }
 
     render() {
         return(
@@ -50,13 +64,18 @@ class Layout extends Component {
                     <span className={classes.white}>FR</span>
                 </div>
 
+                <CallPopup
+                    isOpen={this.state.callPopup}
+                    onClose={this.popupCloseHandler}
+                />
+
                 <NavLink to='/'>
                     <i className={classes.ContextLogo} style={{backgroundImage: 'url(' + contextLogo + ')'}} />
                 </NavLink>
                 <i className={classes.FbLogo} style={{backgroundImage: 'url(' + fbLogo + ')'}} />
                 <i className={classes.IgLogo} style={{backgroundImage: 'url(' + igLogo + ')'}} />
                 <i className={classes.LnLogo} style={{backgroundImage: 'url(' + lnLogo + ')'}} />
-                <i className={classes.PhoneButton} style={{backgroundImage: 'url(' + phoneButton + ')'}} />
+                <i className={classes.PhoneButton} style={{backgroundImage: 'url(' + phoneButton + ')'}} onClick={this.onClickPopupHandler}/>
 
                 <main>
                     { this.props.children }
