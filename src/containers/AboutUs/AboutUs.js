@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import classes from "./AboutUs.module.scss"
+import "./AboutUs.scss"
 import infoPic from "../../img/info-pic.png"
 import employeePicOne from "../../img/employee-pic-1.png"
 import employeePicTwo from "../../img/employee-pic-2.png"
@@ -50,15 +50,14 @@ class Offers extends Component {
     };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        document.querySelector('.rcs-inner-container').scrollTo(0, 0);
     }
-
-
     render() {
 
         return (
-            <div className={classes.AboutUs}>
-                <section>
+            <div className="avy-about-us">
+                <section className="avy-about-us__info">
                     <h1>Qui sommes nous ?</h1>
                     <AboutUsInfo
                         title={this.state.info.title}
@@ -66,9 +65,9 @@ class Offers extends Component {
                         image={this.state.info.image}
                     />
                 </section>
-                <section>
-                    <div className={classes.EmployeesContainer}>
-                        <div className={classes.EmployeesContainer__background} style={{backgroundImage: 'url(' + employeeBg + ')'}}/>
+                <section className="avy-about-us__employees">
+                    <div className="avy-employees-container">
+                        <div className="avy-employees-container__background" style={{backgroundImage: 'url(' + employeeBg + ')'}}/>
                         {this.state.employees.map(employee => {
                                 return (
                                     <Employee

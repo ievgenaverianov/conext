@@ -79,7 +79,7 @@ class Blog extends Component {
                 date: '13.06.2021',
                 image: blogPicFour,
                 articleLink: '#'
-            }
+            },
         ]
     };
 
@@ -106,45 +106,47 @@ class Blog extends Component {
         return (
             <>
                 <div className="avy-blog">
-                    <h1>Notre blog</h1>
-                    <div className="avy-blog__categories">
-                        <span>Catégories :</span>
-                        {categories.map((category) => {
-                            return (
-                                <Button
-                                    onClick={event => this.clickHandler(event, category)}
-                                    isActive={this.state.activeCategory === category}
-                                >
-                                    {category}
-                                </Button>
-                            )
-                        })}
-                    </div>
-                    <div className="avy-blog__articles">
-                        {categories.map((category) => {
-                            if (category === this.state.activeCategory) {
+                    <section>
+                        <h1>Notre blog</h1>
+                        <div className="avy-blog__categories">
+                            <span>Catégories :</span>
+                            {categories.map((category) => {
                                 return (
-                                    <div className={`avy-blog__articles-wrapper avy-blog__${category}`}>
-                                        {this.state.articles.map(article => {
-                                            return (
-                                                category === article.category ?
-                                                    <BlogItem
-                                                        key={article.id}
-                                                        id={article.id}
-                                                        image={article.image}
-                                                        isHidden={this.state.hideItems}
-                                                        category={article.category}
-                                                        date={article.date}
-                                                        title={article.title}
-                                                        link={article.articleLink}
-                                                    /> : null
-                                            )
-                                        })}
-                                    </div>
+                                    <Button
+                                        onClick={event => this.clickHandler(event, category)}
+                                        isActive={this.state.activeCategory === category}
+                                    >
+                                        {category}
+                                    </Button>
                                 )
-                            }
-                        })}
-                    </div>
+                            })}
+                        </div>
+                        <div className="avy-blog__articles">
+                            {categories.map((category) => {
+                                if (category === this.state.activeCategory) {
+                                    return (
+                                        <div className={`avy-blog__articles-wrapper avy-blog__${category}`}>
+                                            {this.state.articles.map(article => {
+                                                return (
+                                                    category === article.category ?
+                                                        <BlogItem
+                                                            key={article.id}
+                                                            id={article.id}
+                                                            image={article.image}
+                                                            isHidden={this.state.hideItems}
+                                                            category={article.category}
+                                                            date={article.date}
+                                                            title={article.title}
+                                                            link={article.articleLink}
+                                                        /> : null
+                                                )
+                                            })}
+                                        </div>
+                                    )
+                                }
+                            })}
+                        </div>
+                    </section>
                 </div>
                 <Footer/>
             </>

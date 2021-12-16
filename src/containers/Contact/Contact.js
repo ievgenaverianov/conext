@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import classes from './Contact.module.scss';
+import './Contact.scss';
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
 import Select from "../../components/UI/Select/Select";
@@ -161,17 +161,17 @@ class Contact extends Component {
             ]}
         />
         return (
-            <div className={classes.Contact}>
+            <div className="Contact">
                 {
                     !this.state.formSent ?
                         <>
                             <h1>Contact</h1>
-                            <form onSubmit={this.submitHandler} className={classes.ContactForm}>
+                            <form onSubmit={this.submitHandler} className="ContactForm">
                                 {this.renderInputs()}
                                 {select}
                                 <label htmlFor="questionTextarea">Votre message :</label>
                                 <textarea id="questionTextarea" placeholder="Parlez-nous de votre projet..." />
-                                <div className={classes.Contact__Info}>
+                                <div className="Contact__Info">
                                     <ContactInfo />
                                     <Button
                                         type="success"

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import classes from './Layout.module.scss';
+import './Layout.scss';
 import MenuToggle from "../../components/Navigation/MenuToggle/MenuToggle";
 import Drawer from "../../components/Navigation/Drawer/Drawer";
 import contextLogo from "../../img/conext-logo.svg"
@@ -9,6 +9,7 @@ import lnLogo from "../../img/linkedin-grey.svg"
 import phoneButton from "../../img/phone-btn.svg";
 import {NavLink} from "react-router-dom";
 import CallPopup from "../../components/UI/CallPopup/CallPopup";
+import CustomScroll from 'react-custom-scroll';
 
 class Layout extends Component {
 
@@ -40,14 +41,10 @@ class Layout extends Component {
             callPopup: false
         })
     }
-    //
-    // componentDidMount() {
-    //     window.scrollTo(0, 0)
-    // }
 
     render() {
         return(
-            <div className={classes.Layout}>
+            <div className="Layout">
 
                 <Drawer
                     isOpen={this.state.menu}
@@ -58,10 +55,10 @@ class Layout extends Component {
                     onToggle={this.toggleMenuHandler}
                     isOpen={this.state.menu}
                 />
-                <div className={classes.Language}>
+                <div className="Language">
                     <span>EN</span>
-                    <span className={classes.white}>|</span>
-                    <span className={classes.white}>FR</span>
+                    <span className="white">|</span>
+                    <span className="white">FR</span>
                 </div>
 
                 <CallPopup
@@ -70,15 +67,16 @@ class Layout extends Component {
                 />
 
                 <NavLink to='/'>
-                    <i className={classes.ContextLogo} style={{backgroundImage: 'url(' + contextLogo + ')'}} />
+                    <i className="ContextLogo" style={{backgroundImage: 'url(' + contextLogo + ')'}} />
                 </NavLink>
-                <i className={classes.FbLogo} style={{backgroundImage: 'url(' + fbLogo + ')'}} />
-                <i className={classes.IgLogo} style={{backgroundImage: 'url(' + igLogo + ')'}} />
-                <i className={classes.LnLogo} style={{backgroundImage: 'url(' + lnLogo + ')'}} />
-                <i className={classes.PhoneButton} style={{backgroundImage: 'url(' + phoneButton + ')'}} onClick={this.onClickPopupHandler}/>
-
+                <i className="FbLogo" style={{backgroundImage: 'url(' + fbLogo + ')'}} />
+                <i className="IgLogo" style={{backgroundImage: 'url(' + igLogo + ')'}} />
+                <i className="LnLogo" style={{backgroundImage: 'url(' + lnLogo + ')'}} />
+                <i className="PhoneButton" style={{backgroundImage: 'url(' + phoneButton + ')'}} onClick={this.onClickPopupHandler}/>
                 <main>
-                    { this.props.children }
+                    <CustomScroll allowOuterScroll={true}>
+                        { this.props.children }
+                    </CustomScroll>
                 </main>
             </div>
         )

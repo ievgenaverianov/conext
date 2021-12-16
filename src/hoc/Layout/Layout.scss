@@ -1,28 +1,34 @@
-.Layout{
+.Layout {
   position: absolute;
   //top: 0;
   //right: 0;
   //bottom: 0;
   //left: 0;
+  //height: 500px;
   width: 100%;
+  //height: 900px;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+  max-height: 100vh;
+  //display: flex;
+  //align-items: center;
   background: transparent linear-gradient(270deg, #000A00 0%, #081326 100%) 0% 0% no-repeat padding-box;
-  overflow: scroll;
+  //overflow: auto;
   overflow-x: hidden;
   main {
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    //max-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
+
   i {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
   .Language {
     position: fixed;
     top: 76px;
@@ -35,13 +41,16 @@
     font: normal normal bold 20px/1.15em Spartan;
     color: #5A605B;
     z-index: 140;
+
     span {
       cursor: pointer;
     }
+
     .white {
       color: #fff
     }
   }
+
   .ContextLogo {
     position: fixed;
     top: 48px;
@@ -51,6 +60,7 @@
     cursor: pointer;
     z-index: 80;
   }
+
   .FbLogo, .IgLogo, .LnLogo {
     position: fixed;
     bottom: 45px;
@@ -59,15 +69,19 @@
     cursor: pointer;
     z-index: 80;
   }
+
   .FbLogo {
     left: 52px;
   }
+
   .IgLogo {
     left: 120px;
   }
+
   .LnLogo {
     left: 187px;
   }
+
   .PhoneButton {
     position: fixed;
     bottom: 60px;
@@ -82,35 +96,136 @@
 ::-webkit-scrollbar {
   width: 0;
 }
+//
+//.rcs-custom-scroll .rcs-outer-container .rcs-positioning {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//}
+
+.rcs-custom-scroll {
+  min-height: 0;
+  min-width: 0
+}
+
+.rcs-custom-scroll .rcs-outer-container {
+  overflow: hidden
+}
+
+//.rcs-custom-scroll .rcs-outer-container .rcs-positioning {
+//  position: relative
+//}
+
+.rcs-custom-scroll .rcs-outer-container:hover .rcs-custom-scrollbar {
+  opacity: 1;
+  transition-duration: 0.2s
+}
+
+.rcs-custom-scroll .rcs-inner-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch
+}
+
+.rcs-custom-scroll .rcs-inner-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  transition: height 0.1s ease-in;
+  will-change: height
+}
+
+.rcs-custom-scroll .rcs-inner-container.rcs-content-scrolled:after {
+  height: 5px;
+  transition: height 0.15s ease-out
+}
+
+.rcs-custom-scroll.rcs-scroll-handle-dragged .rcs-inner-container {
+  user-select: none
+}
+
+.rcs-custom-scroll .rcs-custom-scrollbar {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  top: 0;
+  right: 60px;
+  //opacity: 0;
+  z-index: 1;
+  transition: opacity 0.4s ease-out;
+  padding: 0;
+  box-sizing: border-box;
+  //will-change: opacity;
+  pointer-events: none;
+  transform: scale(.7);
+  background: rgba(255, 255, 255, .5);
+}
+
+.rcs-custom-scroll .rcs-custom-scrollbar.rcs-custom-scrollbar-rtl {
+  right: auto;
+  left: 3px
+}
+
+.rcs-custom-scroll.rcs-scroll-handle-dragged .rcs-custom-scrollbar {
+  opacity: 1
+}
+
+.rcs-custom-scroll .rcs-custom-scroll-handle {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  width: 7px;
+  right: -3px
+}
+
+.rcs-custom-scroll .rcs-inner-handle {
+  height: 100%;
+  margin-top: 0;
+  background-color: #00DE81;
+  border-radius: 3px
+}
 
 @media screen and (max-width: 1800px) {
-  .Layout{
+  .Layout {
     .Language {
       top: 54px;
       right: 62px;
       width: 76px;
       font-size: 16px;
     }
+
     .ContextLogo {
       top: 36px;
       left: 44px;
       width: 160px;
       height: 60px;
     }
+
     .FbLogo, .IgLogo, .LnLogo {
       bottom: 33px;
       width: 35px;
       height: 35px;
     }
+
     .FbLogo {
       left: 39px;
     }
+
     .IgLogo {
       left: 89px;
     }
+
     .LnLogo {
       left: 140px;
     }
+
     .PhoneButton {
       bottom: 44px;
       right: 56px;
@@ -121,13 +236,14 @@
 }
 
 @media screen and (max-width: 1439px) {
-  .Layout{
+  .Layout {
     .ContextLogo {
       top: 32px;
       left: 39px;
       width: 140px;
       height: 53px;
     }
+
     .PhoneButton {
       bottom: 33px;
       right: 39px;
@@ -137,34 +253,51 @@
   }
 }
 
+@media screen and (max-width: 1279px){
+  .rcs-custom-scroll .rcs-custom-scrollbar {
+    right: 20px;
+  }
+  .rcs-custom-scroll .rcs-custom-scroll-handle {
+    width: 6px;
+    right: -2px;
+  }
+
+}
+
 @media screen and (max-width: 1023px) and (orientation: landscape) {
-  .Layout{
+  .Layout {
     .Language {
       top: 20px;
       right: 30px;
       width: 50px;
       font-size: 12px;
     }
+
     .ContextLogo {
       top: 20px;
       left: 30px;
       width: 80px;
       height: 30px;
     }
+
     .FbLogo, .IgLogo, .LnLogo {
       bottom: 20px;
       width: 20px;
       height: 20px;
     }
+
     .FbLogo {
       left: 30px;
     }
+
     .IgLogo {
       left: 70px;
     }
+
     .LnLogo {
       left: 110px;
     }
+
     .PhoneButton {
       bottom: 20px;
       right: 30px;
@@ -175,7 +308,7 @@
 }
 
 @media screen and (max-width: 1279px) and (orientation: portrait) {
-  .Layout{
+  .Layout {
     .Language {
       top: 53px;
       right: 123px;
@@ -183,6 +316,7 @@
       font-size: 17px;
       line-height: 36px;
     }
+
     .ContextLogo {
       top: 37px;
       left: 37px;
@@ -190,9 +324,11 @@
       height: 52px;
       z-index: 100;
     }
+
     .FbLogo, .IgLogo, .LnLogo {
       display: none;
     }
+
     .PhoneButton {
       bottom: 47px;
       right: 49px;
@@ -201,10 +337,13 @@
       z-index: 100;
     }
   }
+  .rcs-custom-scroll .rcs-outer-container .rcs-positioning {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .Layout{
+  .Layout {
     .Language {
       top: 19px;
       right: 59px;
@@ -212,12 +351,14 @@
       font-size: 10px;
       line-height: 15px;
     }
+
     .ContextLogo {
       top: 17px;
       left: 17px;
       width: 68px;
       height: 24px;
     }
+
     .PhoneButton {
       bottom: 22px;
       right: 24px;

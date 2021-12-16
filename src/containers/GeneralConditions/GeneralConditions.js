@@ -11,24 +11,25 @@ class GeneralConditions extends Component {
     };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        document.querySelector('.rcs-inner-container').scrollTo(0, 0);
     }
 
 
     render() {
 
         return (
-            <>
-                <div className="avy-general-conditions">
+            <div className="avy-general-conditions">
+                <section>
                     <h2>{this.state.title}</h2>
                     {this.state.text.map(paragraph => {
                         return (
                             <p>{paragraph}</p>
                         )
                     })}
-                </div>
+                </section>
                 <Footer/>
-            </>
+            </div>
         )
     }
 }

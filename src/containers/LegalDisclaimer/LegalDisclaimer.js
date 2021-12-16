@@ -11,19 +11,27 @@ class LegalDisclaimer extends Component {
             '• Contenu : Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.',
             '• Informations clients : Ci-après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par Conext pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.',
             '• Utilisateur : Internaute se connectant, utilisant le site susnommé.',
-            '• Informations personnelles : « Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l’identification des personnes physiques auxquelles elles s’appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978). \nLes termes « données à caractère personnel », « personne concernée », « sous-traitant » et « données sensibles » ont le sens défini par le Règle- ment Général sur la Protection des Données (RGPD : n° 2016-679).']
+            '• Informations personnelles : « Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l’identification des personnes physiques auxquelles elles s’appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978). \nLes termes « données à caractère personnel », « personne concernée », « sous-traitant » et « données sensibles » ont le sens défini par le Règle- ment Général sur la Protection des Données (RGPD : n° 2016-679).',
+            '• Utilisateur : Internaute se connectant, utilisant le site susnommé.',
+            '• Utilisateur : Internaute se connectant, utilisant le site susnommé.',
+            '• Utilisateur : Internaute se connectant, utilisant le site susnommé.',
+            '• Utilisateur : Internaute se connectant, utilisant le site susnommé.',
+
+        ]
+
     };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        document.querySelector('.rcs-inner-container').scrollTo(0, 0);
     }
 
 
     render() {
 
         return (
-            <>
-                <div className="avy-legal-disclaimer">
+            <div className="avy-legal-disclaimer">
+                <section>
                     <h2>{this.state.title}</h2>
                     <h3>{this.state.subtitle}</h3>
                     {this.state.text.map(paragraph => {
@@ -31,9 +39,9 @@ class LegalDisclaimer extends Component {
                             <p>{paragraph}</p>
                         )
                     })}
-                </div>
+                </section>
                 <Footer/>
-            </>
+            </div>
         )
     }
 }

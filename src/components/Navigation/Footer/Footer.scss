@@ -2,7 +2,7 @@
 
 .Footer {
   position: relative;
-  height: 255px;
+  //height: 255px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -10,7 +10,7 @@
   background: transparent linear-gradient(270deg, #000A00 0%, #081326 100%) 0% 0% no-repeat padding-box;
   border-top: 1px solid rgba(255, 255, 255, .5);
   z-index: 110;
-  padding: 0 61px;
+  padding: 66px 61px;
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
   color: rgba(255, 255, 255, .5);
@@ -120,7 +120,7 @@
 @media screen and (max-width: 1800px) {
   .Footer {
     height: 190px;
-    padding: 0 40px;
+    padding: 49px 40px;
     .Footer__info {
       right: 45px
     }
@@ -130,7 +130,7 @@
 @media screen and (max-width: 1439px) {
   .Footer {
     height: 170px;
-    padding: 0 40px;
+    padding: 43px 40px;
     a {
       font-size: 10px;
     }
@@ -192,7 +192,7 @@
 @media screen and (max-width: 1023px) and (orientation: landscape) {
   .Footer {
     height: 100px;
-    padding: 0 24px;
+    padding: 35px 24px;
     a {
       font-size: 6px;
     }

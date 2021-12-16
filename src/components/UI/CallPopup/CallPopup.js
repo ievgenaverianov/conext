@@ -195,6 +195,7 @@ class CallPopup extends Component {
                             GO
                         </Button>
                     </form>
+                    <i className="avy-call-popup__close-btn fa fa-times" onClick={this.props.onClose}/>
                 </div>
                 {this.props.isOpen ? <Backdrop onClick={this.props.onClose}/> : null}
             </>

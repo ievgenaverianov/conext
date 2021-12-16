@@ -1,10 +1,10 @@
-.SuccessStories {
+.avy-success-stories {
   position: relative;
   width: 100%;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-family: 'Spartan', sans-serif;
   color: #fff;
   margin: 0;
@@ -84,17 +84,21 @@
   .carousel .slide button {
     display: none;
   }
-  section.Portfolio__container {
+  .avy-success-stories__container {
+    margin: calc((100vh - 826px)/2) 0;
+  }
+  .avy-success-stories__portfolio {
     max-width: 1315px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     align-content: center;
+    margin: calc((100vh - 790px)/2) 0;
   }
 }
 
 @media screen and (max-width: 1800px) {
-  .SuccessStories {
+  .avy-success-stories {
     h1 {
       font-size: 50px;
       &:after{
@@ -124,14 +128,18 @@
       font-size: 11px;
       margin: 0 0 9px 0;
     }
-    section.Portfolio__container {
+    .avy-success-stories__container {
+      margin: calc((100vh - 620px)/2) 0;
+    }
+    .avy-success-stories__portfolio {
       max-width: 986px;
+      margin: calc((100vh - 596px)/2) 0;
     }
   }
 }
 
 @media screen and (max-width: 1439px) {
-  .SuccessStories {
+  .avy-success-stories {
     h1 {
       font-size: 45px;
       &:after{
@@ -159,14 +167,18 @@
       font-size: 10px;
       margin: 0 0 8px 0;
     }
-    section.Portfolio__container {
+    .avy-success-stories__container {
+      margin: calc((100vh - 552px)/2) 0;
+    }
+    .avy-success-stories__portfolio {
       max-width: 876px;
+      margin: calc((100vh - 530px)/2) 0;
     }
   }
 }
 
 @media screen and (max-width: 1279px) {
-  .SuccessStories {
+  .avy-success-stories {
     h1 {
       font-size: 36px;
       &:after{
@@ -194,17 +206,20 @@
       font-size: 8px;
       margin: 0 0 6px 0;
     }
-    section.Portfolio__container {
+    .avy-success-stories__container {
+      margin: calc((100vh - 441px)/2) 0;
+    }
+    .avy-success-stories__portfolio {
       max-width: 700px;
+      margin: calc((100vh - 426px)/2) 0;
     }
   }
 }
 
 @media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
-  .SuccessStories {
+  .avy-success-stories {
     section {
       height: auto;
-      margin-top: 220px;
     }
     h1 {
       font-size: 53px;
@@ -272,19 +287,20 @@
       left: 23px;
       top: 49%
     }
-    section.Portfolio__container {
+    .avy-success-stories__container {
+      margin: 220px 0 0 0;
+    }
+    .avy-success-stories__portfolio {
       max-width: 637px;
       grid-template-columns: 1fr;
       margin-top: 5px;
+      margin-bottom: 0;
     }
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .SuccessStories {
-    section {
-      margin-top: 165px;
-    }
+  .avy-success-stories {
     h1 {
       font-size: 40px;
       &:after{
@@ -329,7 +345,10 @@
     .carousel.carousel-slider .control-arrow.control-prev {
       left: 17px;
     }
-    section.Portfolio__container {
+    .avy-success-stories__container {
+      margin: 165px 0 0 0;
+    }
+    .avy-success-stories__portfolio {
       max-width: 478px;
       margin-top: 4px;
     }
@@ -337,15 +356,18 @@
 }
 
 @media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
-  .SuccessStories {
-    section {
-      margin-top: 60px;
+  .avy-success-stories {
+    .avy-success-stories__container {
+      margin: 60px 0 0 0;
+    }
+    .carousel .control-dots {
+      display: none;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .SuccessStories {
+  .avy-success-stories {
     h1 {
       font-size: 19px;
       &:after{
@@ -389,7 +411,7 @@
       left: 8px;
       top: 48%;
     }
-    section.Portfolio__container {
+    section.avy-success-stories__portfolio {
       max-width: 225px;
       margin-top: -8px;
     }

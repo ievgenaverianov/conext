@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import classes from "./Offers.module.scss"
+import "./Offers.scss"
 import offersPicOne from "../../img/offers-pic-1.png"
 import offersPicTwo from "../../img/offers-pic-2.png"
 import offersPicThree from "../../img/offers-pic-3.png"
@@ -42,9 +42,9 @@ class Offers extends Component {
 
         return (
             <>
-                <div className={classes.Offers}>
+                <div className="avy-offers">
                     <h1>Nos offres</h1>
-                    <div className={classes.OffersContent}>
+                    <div className="avy-offers__content">
                         {this.state.sections.map(section => {
                                 return (
                                     <OffersItem
@@ -58,7 +58,7 @@ class Offers extends Component {
                             }
                         )}
                     </div>
-                    <div className={classes.GreenLines} />
+                    <div className="avy-offers__green-lines" />
                     <NavLink to='/contact'><Button>obtenir un devis gratuit</Button></NavLink>
                 </div>
                 <Footer/>

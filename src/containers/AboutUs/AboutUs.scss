@@ -1,35 +1,18 @@
-.AboutUs {
+.avy-about-us {
   width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
   section {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  //&::-webkit-scrollbar {
-  //  position: fixed;
-  //  top: 50px;
-  //  right: 50px;
-  //  width: 1px;
-  //  max-height: 80vh;
-  //  margin-top: 10vh;
-  //  margin-right: 50px;
-  //  background-color: #fff;
-  //}
-  //
-  //&::-webkit-scrollbar-thumb {
-  //  width: 4px;
-  //  height: 500px;
-  //  background-color: #00DE81;
-  //}
   h1 {
     font: normal normal bold 66px/1.4697em Spartan;
     text-align: center;
@@ -46,13 +29,21 @@
   }
 }
 
-.EmployeesContainer {
+.avy-about-us__info {
+  margin: calc((100vh - 728px)/2) 0;
+}
+
+.avy-about-us__employees {
+  margin: calc((100vh - 830px)/2) 0;
+}
+
+.avy-employees-container {
   position: relative;
   width: 1410px;
   height: 830px;
 }
 
-.EmployeesContainer__background {
+.avy-employees-container__background {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +55,7 @@
 }
 
 @media screen and (max-width: 1800px) {
-  .AboutUs {
+  .avy-about-us {
     h1 {
       font-size: 49px;
       &:after{
@@ -73,18 +64,24 @@
       }
     }
   }
-  .EmployeesContainer {
+  .avy-about-us__info {
+    margin: calc((100vh - 547px)/2) 0;
+  }
+  .avy-about-us__employees {
+    margin: calc((100vh - 620px)/2) 0;
+  }
+  .avy-employees-container {
     width: 1050px;
     height: 620px;
   }
-  .EmployeesContainer__background {
+  .avy-employees-container__background {
     width: 600px;
     height: 600px;
   }
 }
 
 @media screen and (max-width: 1439px) {
-  .AboutUs {
+  .avy-about-us {
     h1 {
       font-size: 43px;
       &:after{
@@ -92,35 +89,44 @@
       }
     }
   }
-  .EmployeesContainer {
+  .avy-about-us__info {
+    margin: calc((100vh - 486px)/2) 0;
+  }
+  .avy-about-us__employees {
+    margin: calc((100vh - 550px)/2) 0;
+  }
+  .avy-employees-container {
     width: 930px;
     height: 550px;
   }
-  .EmployeesContainer__background {
+  .avy-employees-container__background {
     width: 540px;
     height: 540px;
   }
 }
 
 @media screen and (max-width: 1023px) and (orientation: landscape) {
-  .AboutUs {
+  .avy-about-us {
     h1 {
       display: none;
     }
   }
-  .EmployeesContainer {
+  .avy-about-us__info, .avy-about-us__employees {
+    margin: 0;
+  }
+  .avy-employees-container {
     width: 256px;
     height: auto;
     margin-top: 49px;
     margin-bottom: 0;
   }
-  .EmployeesContainer__background {
+  .avy-employees-container__background {
     display: none;
   }
 }
 
 @media screen and (max-width: 1279px) and (orientation: portrait) {
-  .AboutUs {
+  .avy-about-us {
     section {
       height: auto;
     }
@@ -128,33 +134,36 @@
       display: none;
     }
   }
-  .EmployeesContainer {
+  .avy-about-us__info, .avy-about-us__employees {
+    margin: 0;
+  }
+  .avy-employees-container {
     width: 512px;
     height: auto;
     margin-top: 98px;
     margin-bottom: 0;
   }
-  .EmployeesContainer__background {
+  .avy-employees-container__background {
     display: none;
   }
 }
 
 @media screen and (max-width: 1023px) and (orientation: portrait) {
-  .EmployeesContainer {
+  .avy-employees-container {
     width: 384px;
     margin-top: 74px;
   }
 }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .EmployeesContainer {
+  .avy-employees-container {
     width: 235px;
     margin-top: 39px;
   }
 }
 
 @media screen and (max-width: 374px) and (orientation: portrait) {
-  .EmployeesContainer {
+  .avy-employees-container {
     width: 201px;
     margin-top: 34px;
   }

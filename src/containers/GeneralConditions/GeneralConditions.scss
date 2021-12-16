@@ -1,16 +1,20 @@
 .avy-general-conditions {
   position: relative;
-  width: 716px;
+  width: 100%;
   height: auto;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'Spartan', sans-serif;
   color: #fff;
-  margin: 0 auto 100px auto;
   box-sizing: border-box;
+  section {
+    width: 716px;
+    margin: 0 auto 100px auto;
+  }
   h2 {
     font: normal normal bold 38px/1.2em Spartan;
     margin-top: 187px;
@@ -34,8 +38,10 @@
 
 @media screen and (max-width: 1800px) {
   .avy-general-conditions {
-    width: 537px;
-    margin: 0 auto 75px auto;
+    section {
+      width: 537px;
+      margin: 0 auto 75px auto;
+    }
     h2 {
       font-size: 29px;
       margin-top: 140px;
@@ -54,8 +60,10 @@
 
 @media screen and (max-width: 1439px) {
   .avy-general-conditions {
-    width: 478px;
-    margin: 0 auto 67px auto;
+    section {
+      width: 478px;
+      margin: 0 auto 67px auto;
+    }
     h2 {
       font-size: 26px;
       margin-top: 124px;
@@ -74,8 +82,10 @@
 
 @media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
   .avy-general-conditions {
-    width: 606px;
-    margin: 0 auto 100px auto;
+    section {
+      width: 606px;
+      margin: 0 auto 100px auto;
+    }
     align-items: center;
     h2 {
       font-size: 27px;
@@ -99,8 +109,10 @@
 
 @media screen and (max-width: 1023px) {
   .avy-general-conditions {
-    width: 455px;
-    margin: 0 auto 75px auto;
+    section {
+      width: 455px;
+      margin: 0 auto 75px auto;
+    }
     h2 {
       font-size: 20px;
       margin-top: 170px;
@@ -119,9 +131,11 @@
 
 @media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
   .avy-general-conditions {
-    width: 210px;
-    min-height: 0;
-    margin: 0 auto 50px auto;
+    section {
+      width: 210px;
+      //min-height: 0;
+      margin: 0 auto 50px auto;
+    }
     h2 {
       font-size: 10px;
       margin-top: 63px;

@@ -78,18 +78,19 @@ class SuccessStories extends Component {
     };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        document.querySelector('.rcs-inner-container').scrollTo(0, 0);
     }
 
     render() {
 
         return (
-            <div className="SuccessStories">
-                <section className="SuccessStories__container">
+            <div className="avy-success-stories">
+                <section className="avy-success-stories__container">
                     <h1>Success stories</h1>
                     <Slider isActive={false} slides={this.state.slides}/>
                 </section>
-                <section className="Portfolio__container">
+                <section className="avy-success-stories__portfolio">
                     {this.state.portfolio.map(item => {
                         return (
                             <PortfolioItem

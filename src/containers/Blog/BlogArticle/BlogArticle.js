@@ -121,8 +121,8 @@ class BlogArticle extends Component {
                             })}
                         </div>
                     </section>
-                </div>
                 <Footer/>
+                </div>
             </>
         )
     }

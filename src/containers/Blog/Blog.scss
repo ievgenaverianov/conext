@@ -1,17 +1,22 @@
 .avy-blog {
   position: relative;
   width: 100%;
-  height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-family: 'Spartan', sans-serif;
   color: #fff;
-  margin: 0;
   box-sizing: border-box;
-  padding: calc((100vh - 773px)/2) 0;
+  section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: calc((100vh - 773px)/2) 0;
+  }
   h1 {
     font: normal normal bold 66px/1.4697em Spartan;
     text-align: center;
@@ -78,7 +83,9 @@
 
 @media screen and (max-width: 1800px) {
   .avy-blog {
-    padding: calc((100vh - 578px)/2) 0;
+    section {
+      margin: calc((100vh - 578px)/2) 0;
+    }
     h1 {
       font-size: 49px;
       &:after {
@@ -113,7 +120,9 @@
 
 @media screen and (max-width: 1439px) {
   .avy-blog {
-    padding: calc((100vh - 511px)/2) 0;
+    section {
+      margin: calc((100vh - 511px)/2) 0;
+    }
     h1 {
       font-size: 43px;
       &:after {
@@ -148,7 +157,9 @@
 
 @media screen and (max-width: 1279px) {
   .avy-blog {
-    padding: calc((100vh - 412px)/2) 0;
+    section {
+      margin: calc((100vh - 411px)/2) 0;
+    }
     h1 {
       font-size: 35px;
       &:after {
@@ -188,6 +199,9 @@
     padding: 0;
     justify-content: flex-start;
     margin-bottom: 100px;
+    section {
+      margin: 0;
+    }
     .avy-blog__articles-wrapper {
       height: auto;
       display: block;
