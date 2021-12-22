@@ -23,7 +23,14 @@ const HomepageItem = props => {
                     <h2>{props.title}</h2>
                     <p>{props.text}</p>
                     { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
-                    { props.slides ? <Slider isActive={props.isActive} slides={props.slides}/> : null }
+                    { props.slides ?
+                        <Slider
+                            isActive={props.isActive}
+                            isInfinite={true}
+                            isSwipeable={true}
+                            slides={props.slides}
+                        />
+                        : null }
                 </div>
             </section>
         </CSSTransition>

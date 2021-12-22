@@ -16,7 +16,7 @@
   &.close{
     display: none;
   }
-  & ~ div {
+  & ~ .avy-backdrop {
     z-index: 150;
   }
   i {

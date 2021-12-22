@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 const SliderItem = props => {
     return (
         <div>
-            <div className="SliderItemContent">
+            <div className="avy-slider-item__content">
                 <i style={{backgroundImage: 'url(' + props.logo + ')'}}/>
                 <h2>{props.title}</h2>
                 <p>{props.text}</p>

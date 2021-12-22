@@ -8,7 +8,8 @@ const Slider = props =>  {
         <Carousel
             autoPlay={props.isActive}
             interval={6000}
-            infiniteLoop={true}
+            infiniteLoop={props.isInfinite}
+            swipeable={props.isSwipeable}
             showThumbs={false}
         >
             {props.slides.map(slide => {

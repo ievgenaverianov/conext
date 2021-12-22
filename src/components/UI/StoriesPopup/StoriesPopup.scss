@@ -1,0 +1,226 @@
+.avy-stories-popup {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 525px;
+  height: 855px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 32px;
+  z-index: 160;
+  color: #fff;
+  box-sizing: border-box;
+  &.close{
+    display: none;
+  }
+  & ~ .avy-backdrop {
+    z-index: 150;
+  }
+  .carousel-root {
+    width: 100%;
+    height: 780px;
+    padding: 0 40px;
+    margin: 0;
+    border: none;
+  }
+  .slide .avy-slider-item__content {
+    width: 100%;
+    i {
+      height: 0;
+    }
+  }
+  .carousel.carousel-slider {
+    position: relative;
+  }
+  .carousel .slide img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 75px;
+    left: 0;
+  }
+
+  .carousel .control-dots {
+    top: 30px;
+    bottom: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li.dot {
+      width: 75px;
+      margin: 0 7px;
+    }
+    li.dot.selected {
+      transform: translate(0);
+    }
+  }
+
+  .carousel.carousel-slider .control-arrow.control-prev {
+    display: none;
+  }
+
+  .carousel.carousel-slider .control-arrow.control-next {
+    width: 443px;
+    height: 672px;
+    top: 75px;
+    right: 0;
+    transform: none;
+    background: transparent;
+    &:before {
+      display: none;
+    }
+  }
+
+  button {
+    display: flex;
+    width: 150px;
+    height: 45px;
+    margin: 0 auto;
+    font: normal normal normal 13px/15px Spartan;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .avy-stories-popup {
+    width: 394px;
+    height: 641px;
+    .carousel-root {
+      height: 585px;
+      padding: 0 30px;
+    }
+    .carousel .slide img {
+      top: 56px;
+    }
+    .carousel .control-dots {
+      top: 23px;
+      li.dot {
+        width: 75px;
+        margin: 0 5px;
+      }
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 332px;
+      height: 504px;
+      top: 56px;
+    }
+    button {
+      width: 112px;
+      height: 34px;
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .avy-stories-popup {
+    width: 350px;
+    height: 570px;
+    .carousel-root {
+      height: 520px;
+      padding: 0 27px;
+    }
+    .carousel .slide img {
+      top: 49px;
+    }
+    .carousel .control-dots {
+      top: 20px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 294px;
+      height: 446px;
+      top: 49px;
+    }
+    button {
+      width: 100px;
+      height: 30px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
+  .avy-stories-popup {
+    width: 656px;
+    height: 941px;
+    border: none;
+    .carousel-root {
+      height: 874px;
+      padding: 0 36px;
+    }
+    .carousel .slide img {
+      top: 65px;
+    }
+    .carousel .control-dots {
+      top: 5px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 584px;
+      height: 809px;
+      top: 65px;
+    }
+    button {
+      width: 224px;
+      height: 80px;
+      font-size: 25px;
+      margin: 70px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .avy-stories-popup {
+    width: 492px;
+    height: 706px;
+    .carousel-root {
+      height: 656px;
+      padding: 0 27px;
+    }
+    .carousel .slide img {
+      top: 49px;
+    }
+    .carousel .control-dots {
+      top: 4px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 438px;
+      height: 606px;
+      top: 49px;
+    }
+    button {
+      width: 168px;
+      height: 60px;
+      font-size: 19px;
+      margin: 53px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+  .avy-stories-popup {
+    width: 271px;
+    height: 440px;
+    .carousel-root {
+      height: 376px;
+      padding: 0 30px;
+    }
+    .carousel .slide img {
+      top: 78px;
+    }
+    .carousel .control-dots {
+      top: 45px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 211px;
+      height: 298px;
+      top: 78px;
+    }
+    button {
+      width: 82px;
+      height: 29px;
+      font-size: 10px;
+      margin: 32px auto;
+    }
+  }
+}

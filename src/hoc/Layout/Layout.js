@@ -7,15 +7,18 @@ import fbLogo from "../../img/facebook.svg"
 import igLogo from "../../img/instagram.svg"
 import lnLogo from "../../img/linkedin-grey.svg"
 import phoneButton from "../../img/phone-btn.svg";
-import {NavLink} from "react-router-dom";
+// import {NavLink} from "react-router-dom";
 import CallPopup from "../../components/UI/CallPopup/CallPopup";
 import CustomScroll from 'react-custom-scroll';
+import StoriesPopup from "../../components/UI/StoriesPopup/StoriesPopup";
+import CircularProgressBar from "../../components/UI/CircularProgressBar/CircularProgressBar";
 
 class Layout extends Component {
 
     state = {
         menu: false,
-        callPopup: false
+        callPopup: false,
+        storiesPopup: false,
     }
 
     toggleMenuHandler = () => {
@@ -30,16 +33,37 @@ class Layout extends Component {
         })
     }
 
-    onClickPopupHandler = () => {
+    onClickCallPopupHandler = () => {
         this.setState({
             callPopup: !this.state.callPopup
         })
     }
 
-    popupCloseHandler = () => {
+    callPopupCloseHandler = () => {
         this.setState({
             callPopup: false
         })
+    }
+
+    onClickStoriesPopupHandler = () => {
+        let storiesShown = sessionStorage.getItem("storiesShown")
+        if (!storiesShown) {
+            this.setState({
+                storiesPopup: !this.state.storiesPopup,
+                storiesToShow: !this.state.storiesToShow
+            })
+            sessionStorage.setItem("storiesShown", "true")
+        }
+    }
+
+    storiesPopupCloseHandler = () => {
+        this.setState({
+            storiesPopup: false
+        })
+    }
+
+    componentDidMount() {
+        setTimeout(() => localStorage.setItem("notificationShown", "true"), 10000);
     }
 
     render() {
@@ -63,16 +87,31 @@ class Layout extends Component {
 
                 <CallPopup
                     isOpen={this.state.callPopup}
-                    onClose={this.popupCloseHandler}
+                    onClose={this.callPopupCloseHandler}
                 />
 
-                <NavLink to='/'>
-                    <i className="ContextLogo" style={{backgroundImage: 'url(' + contextLogo + ')'}} />
-                </NavLink>
+                <i className="ContextLogo" style={{backgroundImage: 'url(' + contextLogo + ')'}} />
                 <i className="FbLogo" style={{backgroundImage: 'url(' + fbLogo + ')'}} />
                 <i className="IgLogo" style={{backgroundImage: 'url(' + igLogo + ')'}} />
                 <i className="LnLogo" style={{backgroundImage: 'url(' + lnLogo + ')'}} />
-                <i className="PhoneButton" style={{backgroundImage: 'url(' + phoneButton + ')'}} onClick={this.onClickPopupHandler}/>
+                <i className="PhoneButton" style={{backgroundImage: 'url(' + phoneButton + ')'}} onClick={this.onClickCallPopupHandler}/>
+
+                {
+                    (!sessionStorage.getItem("storiesShown")) ?
+                        <CircularProgressBar onClick={this.onClickStoriesPopupHandler} />
+                        : null
+                }
+
+                {
+                    (!localStorage.getItem("notificationShown")) ?
+                        <span onLoad={this.onLoadNotificationHandler} className="avy-stories-notification">Découvrez nos stories !</span>
+                        : null
+                }
+
+                <StoriesPopup
+                    isOpen={this.state.storiesPopup}
+                    onClose={this.storiesPopupCloseHandler}
+                />
                 <main>
                     <CustomScroll allowOuterScroll={true}>
                         { this.props.children }

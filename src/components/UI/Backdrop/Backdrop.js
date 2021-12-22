@@ -1,6 +1,6 @@
 import React from "react";
-import classes from './Backdrop.module.scss'
+import './Backdrop.scss'
 
-const Backdrop = props => <div className={classes.Backdrop} onClick={props.onClick} />
+const Backdrop = props => <div className="avy-backdrop" onClick={props.onClick} />
 
 export default Backdrop

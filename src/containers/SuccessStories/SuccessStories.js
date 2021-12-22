@@ -88,7 +88,12 @@ class SuccessStories extends Component {
             <div className="avy-success-stories">
                 <section className="avy-success-stories__container">
                     <h1>Success stories</h1>
-                    <Slider isActive={false} slides={this.state.slides}/>
+                    <Slider
+                        isActive={false}
+                        isInfinite={true}
+                        isSwipeable={true}
+                        slides={this.state.slides}
+                    />
                 </section>
                 <section className="avy-success-stories__portfolio">
                     {this.state.portfolio.map(item => {
