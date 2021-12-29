@@ -140,7 +140,7 @@
   }
 }
 
-@media screen and (max-width: 1279px) and (orientation: portrait), screen and (max-width: 1023px) and (orientation: landscape) {
+@media screen and (max-width: 1279px) and (orientation: portrait) {
   .avy-stories-popup {
     width: 656px;
     height: 941px;
@@ -197,7 +197,92 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .avy-stories-popup {
+    width: 197px;
+    height: 350px;
+    border: none;
+    .carousel-root {
+      height: 273px;
+      padding: 0 22px;
+    }
+    .carousel .slide img {
+      top: 57px;
+    }
+    .carousel .control-dots {
+      top: 33px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 153px;
+      height: 217px;
+      top: 57px;
+    }
+    button {
+      width: 59px;
+      height: 21px;
+      font-size: 7px;
+      margin: 23px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .avy-stories-popup {
+    width: 350px;
+    height: 569px;
+    .carousel-root {
+      height: 486px;
+      padding: 0 39px;
+    }
+    .carousel .slide img {
+      top: 101px;
+    }
+    .carousel .control-dots {
+      top: 58px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 272px;
+      height: 385px;
+      top: 101px;
+    }
+    button {
+      width: 106px;
+      height: 37px;
+      font-size: 13px;
+      margin: 41px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 413px) and (orientation: portrait) {
+  .avy-stories-popup {
+    width: 317px;
+    height: 515px;
+    .carousel-root {
+      height: 440px;
+      padding: 0 35px;
+    }
+    .carousel .slide img {
+      top: 91px;
+    }
+    .carousel .control-dots {
+      top: 53px;
+    }
+    .carousel.carousel-slider .control-arrow.control-next {
+      width: 247px;
+      height: 349px;
+      top: 91px;
+    }
+    button {
+      width: 96px;
+      height: 34px;
+      font-size: 12px;
+      margin: 37px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) and (orientation: portrait) {
   .avy-stories-popup {
     width: 271px;
     height: 440px;

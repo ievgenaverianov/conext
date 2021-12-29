@@ -220,7 +220,153 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (orientation: landscape), screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .avy-call-popup {
+    width: 198px;
+    height: 320px;
+    border-radius: 20px;
+    padding: 27px 23px;
+    margin-top: 0;
+    i {
+      width: 30px;
+      height: 30px;
+    }
+    h2 {
+      font-size: 9px;
+      margin: 11px auto;
+    }
+    .avy-call-popup__form {
+      width: 152px;
+      margin-top: 17px;
+      & > div {
+        margin-bottom: 9px;
+      }
+      label {
+        font-size: 7px;
+        margin-bottom: 5px;
+      }
+      input, select {
+        height: 23px;
+        font-size: 8px;
+      }
+      .Select:after {
+        right: 10px;
+        bottom: 10px;
+      }
+      .Input span {
+        font-size: 6px;
+        line-height: 1.2;
+        margin-top: 2px;
+      }
+      button {
+        width: 57px;
+        height: 17px;
+        font-size: 7px;
+        margin: 23px auto;
+      }
+    }
+    .avy-call-popup__close-btn {
+      top: 15px;
+      right: 20px;
+      width: 13px;
+      height: 16px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .avy-call-popup {
+    width: 299px;
+    height: 482px;
+    border-radius: 15px;
+    padding: 46px 39px;
+    margin-top: 32px;
+    i {
+      width: 53px;
+      height: 53px;
+    }
+    h2 {
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 21px auto;
+    }
+    .avy-call-popup__form {
+      width: 220px;
+      margin-top: 36px;
+      & > div {
+        margin-bottom: 10px;
+      }
+      input, select {
+        height: 26px;
+      }
+      label {
+        font-size: 9px;
+        margin-bottom: 6px;
+      }
+      button {
+        width: 98px;
+        height: 30px;
+        font-size: 13px;
+        margin: 22px auto;
+      }
+    }
+    .avy-call-popup__close-btn {
+      top: 19px;
+      right: 19px;
+      width: 26px;
+      height: 26px;
+      font-size: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 413px) and (orientation: portrait) {
+  .avy-call-popup {
+    width: 270px;
+    height: 437px;
+    border-radius: 14px;
+    padding: 42px 35px;
+    margin-top: 29px;
+    i {
+      width: 48px;
+      height: 48px;
+    }
+    h2 {
+      font-size: 12px;
+      margin: 19px auto;
+    }
+    .avy-call-popup__form {
+      width: 200px;
+      margin-top: 33px;
+      & > div {
+        margin-bottom: 9px;
+      }
+      input, select {
+        height: 23px;
+      }
+      label {
+        font-size: 8px;
+        margin-bottom: 6px;
+      }
+      button {
+        width: 89px;
+        height: 27px;
+        font-size: 12px;
+        margin: 20px auto;
+      }
+    }
+    .avy-call-popup__close-btn {
+      top: 17px;
+      right: 17px;
+      width: 23px;
+      height: 23px;
+      font-size: 23px;
+    }
+  }
+}
+
+@media screen and (max-width: 325px) and (orientation: portrait) {
   .avy-call-popup {
     width: 231px;
     height: 373px;
@@ -233,7 +379,6 @@
     }
     h2 {
       font-size: 10px;
-      line-height: 1.5;
       margin: 16px auto;
     }
     .avy-call-popup__form {

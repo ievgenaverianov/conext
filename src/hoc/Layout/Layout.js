@@ -104,7 +104,7 @@ class Layout extends Component {
 
                 {
                     (!localStorage.getItem("notificationShown")) ?
-                        <span onLoad={this.onLoadNotificationHandler} className="avy-stories-notification">Découvrez nos stories !</span>
+                        <span className="avy-stories-notification">Découvrez nos stories !</span>
                         : null
                 }
 

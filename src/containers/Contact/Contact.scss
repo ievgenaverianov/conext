@@ -75,6 +75,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  & > div {
+    min-width: 0;
+  }
 }
 
 @media screen and (max-width: 1800px) {
@@ -177,7 +180,7 @@
     transform: translate(0, 0);
     left: 0;
     top: 0;
-    margin: 75px 0 50px 0;
+    margin: 0;
     label {
       font-size: 9px;
       margin: 10px 0 10px 0;
@@ -279,32 +282,145 @@
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .Contact {
-    max-height: 600px;
+    max-height: 776px;
     height: 100vh;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     h1 {
-      font-size: 18px;
+      font-size: 23px;
       &:after{
-        width: 40px;
+        width: 52px;
         height: 2px;
-        margin-top: 7px;
+        margin-top: 9px;
       }
     }
     button {
       position: relative;
+      width: 79px;
+      height: 24px;
+      font-size: 10px;
+    }
+  }
+  .ContactForm {
+    top: 23%;
+    label {
+      font-size: 9px;
+      margin: 1px 0 3px 0;
+    };
+    input {
+      width: 323px;
+      height: 22px;
+      font-size: 10px;
+      padding: 0 13px;
+    }
+    select {
+      width: 323px;
+      height: 22px;
+      font-size: 8px;
+      line-height: 22px;
+      padding: 0 13px;
+    }
+    textarea {
+      width: 323px;
+      height: 119px;
+      border-radius: 10px;
+      font-size: 9px;
+      padding: 11px;
+    }
+  }
+  .Contact__Info {
+    margin-top: 20px;
+    div span {
+      font-size: 9px;
+      margin-top: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 413px) and (orientation: portrait) {
+  .Contact {
+    max-height: 703px;
+    h1 {
+      font-size: 21px;
+      &:after{
+        width: 47px;
+        margin-top: 8px;
+      }
+    }
+    button {
+      width: 72px;
+      height: 22px;
+      font-size: 9px;
+    }
+  }
+  .ContactForm {
+    top: 23%;
+    label {
+      font-size: 8px;
+    };
+    input {
+      width: 293px;
+      height: 20px;
+      font-size: 9px;
+      padding: 0 11px;
+    }
+    select {
+      width: 293px;
+      height: 20px;
+      font-size: 9px;
+      line-height: 20px;
+      padding: 0 11px;
+    }
+    textarea {
+      width: 293px;
+      height: 108px;
+      border-radius: 9px;
+      font-size: 8px;
+      padding: 10px;
+    }
+  }
+  .Contact__Info {
+    margin-top: 18px;
+    div span {
+      font-size: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) and (orientation: portrait) {
+  .Contact {
+    max-height: 600px;
+    h1 {
+      font-size: 18px;
+      &:after{
+        width: 40px;
+        margin-top: 7px;
+      }
+    }
+    button {
       width: 62px;
       height: 19px;
       font-size: 8px;
     }
   }
   .ContactForm {
-    top: 23%;
     label {
       font-size: 7px;
-      margin: 1px 0 3px 0;
     };
+    input {
+      width: 250px;
+      height: 17px;
+      font-size: 8px;
+      padding: 0 10px;
+    }
+    select {
+      width: 250px;
+      height: 17px;
+      font-size: 8px;
+      line-height: 17px;
+      padding: 0 10px;
+    }
     textarea {
       width: 250px;
       height: 92px;
