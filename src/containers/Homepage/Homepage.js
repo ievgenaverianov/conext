@@ -218,6 +218,8 @@ class Homepage extends Component {
 
     render() {
 
+        let vh = window.innerHeight * 0.01;
+
         return (
             <>
                 <div className={classes.Homepage}

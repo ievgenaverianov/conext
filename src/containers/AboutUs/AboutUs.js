@@ -51,7 +51,9 @@ class Offers extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        document.querySelector('.rcs-inner-container').scrollTo(0, 0);
+        if (window.innerWidth >= 1023 && window.innerHeight < window.innerWidth) {
+            document.querySelector('.rcs-inner-container').scrollTo(0, 0);
+        }
     }
     render() {
 

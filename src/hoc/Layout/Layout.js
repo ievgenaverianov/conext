@@ -113,9 +113,14 @@ class Layout extends Component {
                     onClose={this.storiesPopupCloseHandler}
                 />
                 <main>
-                    <CustomScroll allowOuterScroll={true}>
-                        { this.props.children }
-                    </CustomScroll>
+                    {(window.innerWidth >= 1023 && window.innerHeight < window.innerWidth) ?
+                        <CustomScroll allowOuterScroll={true}>
+                            { this.props.children }
+                        </CustomScroll> :
+                        <>
+                            { this.props.children }
+                        </>
+                    }
                 </main>
             </div>
         )

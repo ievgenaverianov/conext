@@ -13,6 +13,7 @@
   margin: 0;
   opacity: 0;
   overflow: hidden;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   z-index: 1;
   &.active {
@@ -20,16 +21,26 @@
     z-index: 10;
     & > img {
       opacity: 1;
+      -webkit-transition-delay: 1s;
       transition-delay: 1s;
     }
     & ~ .hpi-exit-active .HomepageItem__content {
+      -webkit-animation: webkit-next-text-fade 1s ease-in-out;
+      -moz-animation: next-text-fade 1s ease-in-out;
+      -o-animation: next-text-fade 1s ease-in-out;
       animation: next-text-fade 1s ease-in-out;
     }
   }
   &.hpi-enter-active .HomepageItem__content {
+    -webkit-animation: webkit-next-text-appear 2s ease-in-out;
+    -moz-animation: next-text-appear 2s ease-in-out;
+    -o-animation: next-text-appear 2s ease-in-out;
     animation: next-text-appear 2s ease-in-out;
   }
   &.hpi-exit-active .HomepageItem__content {
+    -webkit-animation: webkit-next-text-remove 1s ease-in-out;
+    -moz-animation: next-text-remove 1s ease-in-out;
+    -o-animation: next-text-remove 1s ease-in-out;
     animation: next-text-remove 1s ease-in-out;
   }
   .HomepageItem__content {
@@ -63,6 +74,7 @@
     right: 0;
     z-index: 0;
     opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
   a {
@@ -206,8 +218,28 @@
     transform: translateY(0);
   }
 }
+@-webkit-keyframes webkit-next-text-appear {
+  from, 50% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes next-text-remove {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}
+@-webkit-keyframes webkit-next-text-remove {
   from {
     opacity: 1;
     transform: translateY(0);
@@ -226,6 +258,14 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes webkit-next-text-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 @keyframes next-title-appear-mob {
   from, 50% {
@@ -235,8 +275,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes webkit-next-title-appear-mob {
+  from, 50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes next-text-remove-mob {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
+@-webkit-keyframes webkit-next-text-remove-mob {
   from {
     opacity: 1;
     transform: translateY(0);
@@ -476,6 +534,7 @@
         font-size: 72px;
         max-width: 453px;
         word-spacing: 20px;
+        padding: 0;
         margin: 37px 0 0 4px;
       }
       h2:before {
@@ -653,22 +712,37 @@
     &.active ~ .hpi-exit-active .HomepageItem__content,
     &.hpi-enter-active .HomepageItem__content,
     &.hpi-exit-active .HomepageItem__content {
+      -webkit-animation: none;
+      -moz-animation: none;
+      -o-animation: none;
       animation: none;
     }
     &.active ~ .hpi-exit-active .HomepageItem__content > p,
     &.active ~ .hpi-exit-active .HomepageItem__content > a {
+      -webkit-animation: webkit-next-text-fade 1s ease-in-out;
+      -moz-animation: next-text-fade 1s ease-in-out;
+      -o-animation: next-text-fade 1s ease-in-out;
       animation: next-text-fade 1s ease-in-out;
     }
     &.hpi-enter-active .HomepageItem__content > h2,
     &.hpi-enter-active .HomepageItem__content > .carousel-root {
+      -webkit-animation: webkit-next-title-appear-mob 2s ease-in-out;
+      -moz-animation: next-title-appear-mob 2s ease-in-out;
+      -o-animation: next-title-appear-mob 2s ease-in-out;
       animation: next-title-appear-mob 2s ease-in-out;
     }
     &.hpi-enter-active .HomepageItem__content > p,
     &.hpi-enter-active .HomepageItem__content > a {
+      -webkit-animation: webkit-next-text-appear 2s ease-in-out;
+      -moz-animation: next-text-appear 2s ease-in-out;
+      -o-animation: next-text-appear 2s ease-in-out;
       animation: next-text-appear 2s ease-in-out;
     }
     &.hpi-exit-active .HomepageItem__content > p,
     &.hpi-exit-active .HomepageItem__content > a {
+      -webkit-animation: webkit-next-text-remove-mob 1s ease-in-out;
+      -moz-animation: next-text-remove-mob 1s ease-in-out;
+      -o-animation: next-text-remove-mob 1s ease-in-out;
       animation: next-text-remove-mob 1s ease-in-out;
     }
     .HomepageItem__content {
@@ -721,6 +795,7 @@
         margin: 0;
       }
       img {
+        content: url(https://www.conext-agence.com/static/media/homepage-pic-1-tablet.f720e952.png);
         width: 100%;
         max-height: 100%;
         bottom: 24%;
@@ -743,6 +818,7 @@
         margin: 537px 0 0 0;
       }
       img {
+        content: url(https://www.conext-agence.com/static/media/homepage-pic-2-tablet.dde882f1.png);
         max-height: 453px;
         right: 50%;
         transform: translateX(50%);
@@ -777,6 +853,7 @@
         margin: 513px 0 0 0;
       }
       img {
+        content: url(https://www.conext-agence.com/static/media/homepage-pic-4-tablet.f9e684d2.png);
         max-height: 648px;
         right: 50%;
         transform: translateX(50%);
@@ -806,6 +883,7 @@
         line-height: 1.614;
       }
       img {
+        content: url(https://context-app-by-ya.herokuapp.com/static/media/homepage-pic-5.88b1764b.png);
         max-height: 432px;
         right: 50%;
         transform: translateX(50%);

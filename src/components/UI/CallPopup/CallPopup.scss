@@ -300,6 +300,10 @@
       input, select {
         height: 26px;
       }
+      .Select:after {
+        right: 11px;
+        bottom: 11px;
+      }
       label {
         font-size: 9px;
         margin-bottom: 6px;
@@ -345,6 +349,10 @@
       input, select {
         height: 23px;
       }
+      .Select:after {
+        right: 10px;
+        bottom: 10px;
+      }
       label {
         font-size: 8px;
         margin-bottom: 6px;
@@ -366,7 +374,7 @@
   }
 }
 
-@media screen and (max-width: 325px) and (orientation: portrait) {
+@media screen and (max-width: 374px) and (orientation: portrait) {
   .avy-call-popup {
     width: 231px;
     height: 373px;
@@ -389,6 +397,10 @@
       }
       input, select {
         height: 20px;
+      }
+      .Select:after {
+        right: 8px;
+        bottom: 8px;
       }
       label {
         font-size: 7px;
