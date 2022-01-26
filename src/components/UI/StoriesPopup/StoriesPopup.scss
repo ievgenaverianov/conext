@@ -27,6 +27,9 @@
   }
   .slide .avy-slider-item__content {
     width: 100%;
+    //height: 672px;
+    //margin-top: 75px;
+    //overflow: hidden;
     i {
       height: 0;
     }
@@ -34,12 +37,23 @@
   .carousel.carousel-slider {
     position: relative;
   }
-  .carousel .slide img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 75px;
-    left: 0;
+  .carousel .slide {
+    max-height: 747px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 75px;
+      left: 0;
+    }
+    video {
+      width: 100%;
+      height: auto !important;
+      position: absolute;
+      top: 75px;
+      left: 0;
+    }
   }
 
   .carousel .control-dots {
@@ -90,8 +104,11 @@
       height: 585px;
       padding: 0 30px;
     }
-    .carousel .slide img {
-      top: 56px;
+    .carousel .slide {
+      max-height: 560px;
+      img, video {
+        top: 56px;
+      }
     }
     .carousel .control-dots {
       top: 23px;
@@ -121,10 +138,13 @@
       height: 520px;
       padding: 0 27px;
     }
-    .carousel .slide img {
-      top: 49px;
+    .carousel .slide {
+      max-height: 494px;
+      img, video {
+        top: 49px;
+      }
     }
-    .carousel .control-dots {
+      .carousel .control-dots {
       top: 20px;
     }
     .carousel.carousel-slider .control-arrow.control-next {
@@ -149,8 +169,11 @@
       height: 874px;
       padding: 0 36px;
     }
-    .carousel .slide img {
-      top: 65px;
+    .carousel .slide {
+      max-height: 873px;
+      img, video {
+        top: 65px;
+      }
     }
     .carousel .control-dots {
       top: 5px;
@@ -177,8 +200,11 @@
       height: 656px;
       padding: 0 27px;
     }
-    .carousel .slide img {
-      top: 49px;
+    .carousel .slide {
+      max-height: 655px;
+      img, video {
+        top: 49px;
+      }
     }
     .carousel .control-dots {
       top: 4px;
@@ -206,8 +232,11 @@
       height: 273px;
       padding: 0 22px;
     }
-    .carousel .slide img {
-      top: 57px;
+    .carousel .slide {
+      max-height: 273px;
+      img, video {
+        top: 57px;
+      }
     }
     .carousel .control-dots {
       top: 33px;
@@ -234,8 +263,11 @@
       height: 486px;
       padding: 0 39px;
     }
-    .carousel .slide img {
-      top: 101px;
+    .carousel .slide {
+      max-height: 485px;
+      img, video {
+        top: 101px;
+      }
     }
     .carousel .control-dots {
       top: 58px;
@@ -262,8 +294,11 @@
       height: 440px;
       padding: 0 35px;
     }
-    .carousel .slide img {
-      top: 91px;
+    .carousel .slide {
+      max-height: 439px;
+      img, video {
+        top: 91px;
+      }
     }
     .carousel .control-dots {
       top: 53px;

@@ -11,6 +11,7 @@ const Slider = props =>  {
             infiniteLoop={props.isInfinite}
             swipeable={props.isSwipeable}
             showThumbs={false}
+            onChange={(index) => props.onSlideChange(index)}
         >
             {props.slides.map(slide => {
                     return (
@@ -22,7 +23,9 @@ const Slider = props =>  {
                             buttonText={slide.buttonText}
                             buttonLink={slide.buttonLink}
                             image={slide.image}
+                            video={slide.video}
                             logo={slide.logo}
+                            isActive={slide.isActive}
                         />
                     )
                 }

@@ -90,8 +90,6 @@ class Homepage extends Component {
     };
 
     onScrollEventHandler = (e) => {
-        // e.preventDefault();
-
         if (this.state.canBeScrolled) {
             if (e.deltaY > 0) {
                 if (this.state.activeSection <  this.state.sections.length) {
@@ -129,7 +127,6 @@ class Homepage extends Component {
     }
 
     handleTouchStart(touchStartEvent) {
-        // touchStartEvent.preventDefault();
         this.handleStart(touchStartEvent.targetTouches[0].clientX, touchStartEvent.targetTouches[0].clientY);
     }
 
@@ -190,35 +187,9 @@ class Homepage extends Component {
                 }), 2000)
             }
         }
-        // console.log('deltaX=', this.state.deltaX)
-        // console.log('deltaY=', this.state.deltaY)
     }
 
-    // onBtnClickHandler = () => {
-    //     console.log('button clicked')
-    // }
-
-
-    // handleMouseDown(mouseDownEvent) {
-    //     mouseDownEvent.preventDefault();
-    //     this.handleStart(mouseDownEvent.clientX, mouseDownEvent.clientY);
-    // }
-    //
-    // handleMouseMove(mouseMoveEvent) {
-    //     this.handleMove(mouseMoveEvent.clientX, mouseMoveEvent.clientY);
-    // }
-    //
-    // handleMouseUp() {
-    //     this.handleEnd();
-    // }
-    //
-    // handleMouseLeave() {
-    //     this.handleMouseUp();
-    // }
-
     render() {
-
-        let vh = window.innerHeight * 0.01;
 
         return (
             <>
@@ -227,11 +198,6 @@ class Homepage extends Component {
                      onTouchStart={(window.screen.width < 1279) ? touchStartEvent => this.handleTouchStart(touchStartEvent) : null}
                      onTouchMove={(window.screen.width < 1279) ? touchMoveEvent => this.handleTouchMove(touchMoveEvent) : null}
                      onTouchEnd={(window.screen.width < 1279) ? () => this.handleTouchEnd() : null}
-
-                    // onMouseDown={mouseDownEvent => this.handleMouseDown(mouseDownEvent)}
-                    // onMouseMove={mouseMoveEvent => this.handleMouseMove(mouseMoveEvent)}
-                    // onMouseUp={() => this.handleMouseUp()}
-                    // onMouseLeave={() => this.handleMouseLeave()}
                 >
                     {this.state.sections.map(section => {
                             return (

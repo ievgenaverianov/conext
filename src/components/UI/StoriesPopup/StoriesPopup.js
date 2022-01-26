@@ -3,54 +3,78 @@ import './StoriesPopup.scss';
 import Backdrop from "../Backdrop/Backdrop";
 import Slider from "../Slider/Slider";
 import storiesPicOne from "../../../img/stories-pic-1.png";
+import storiesVidOne from "../../../img/stories-video.mp4";
 import Button from "../Button/Button";
 
 class StoriesPopup extends Component {
 
-    clickHandler = () => {
-        this.props.onClose()
-    }
-
     state = {
+        activeSlideIndex: 0,
         slides: [
             {
                 id: 1,
                 image: storiesPicOne,
+                isActive: false
             },
             {
                 id: 2,
                 image: storiesPicOne,
+                isActive: false
             },
             {
                 id: 3,
-                image: storiesPicOne,
+                video: storiesVidOne,
+                isActive: false
             },
             {
                 id: 4,
                 image: storiesPicOne,
+                isActive: false
             },
             {
                 id: 5,
-                image: storiesPicOne,
+                video: storiesVidOne,
+                isActive: false
             },
-            // {
-            //     id: 6,
-            //     image: storiesPicOne,
-            // },
-            // {
-            //     id: 7,
-            //     image: storiesPicOne,
-            // },            {
-            //     id: 8,
-            //     image: storiesPicOne,
-            // }
+            {
+                id: 6,
+                image: storiesPicOne,
+                isActive: false
+            },
         ]
+    }
+
+    clickHandler = () => {
+        this.props.onClose()
+        const slides = [...this.state.slides]
+        slides.forEach(function (item){
+            item.isActive = false
+        })
+        this.setState({
+            slides
+        });
+    }
+
+    onSlideChange = slideIndex => {
+        console.log(slideIndex);
+        const slides = [...this.state.slides]
+        slides.forEach(function (item){
+            item.isActive = false
+        })
+        slides[slideIndex].isActive = true
+
+        this.setState({
+            activeSlideIndex: slideIndex,
+            slides
+        });
     }
 
     render() {
 
         let cssClasses = `avy-stories-popup`;
         if (!this.props.isOpen) cssClasses += ` close`;
+
+        console.log(this.state.slides);
 
         return (
             <>
@@ -59,10 +83,12 @@ class StoriesPopup extends Component {
                             isInfinite={false}
                             isSwipeable={false}
                             slides={this.state.slides}
+                            activeSlideId={this.state.activeSlideIndex}
+                            onSlideChange={this.onSlideChange}
                     />
-                    <Button onClick={this.props.onClose}>Fermer</Button>
+                    <Button onClick={this.clickHandler}>Fermer</Button>
                 </div>
-                {this.props.isOpen ? <Backdrop onClick={this.props.onClose}/> : null}
+                {this.props.isOpen ? <Backdrop onClick={this.clickHandler}/> : null}
             </>
         )
     }

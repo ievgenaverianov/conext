@@ -2,6 +2,7 @@ import React from "react";
 import "./SliderItem.scss"
 import Button from "../../Button/Button";
 import {NavLink} from "react-router-dom";
+import ReactPlayer from 'react-player'
 
 
 const SliderItem = props => {
@@ -13,7 +14,8 @@ const SliderItem = props => {
                 <p>{props.text}</p>
                 { props.buttonLink ? <NavLink to={props.buttonLink}><Button>{props.buttonText}</Button></NavLink> : null }
             </div>
-            <img src={props.image} alt="slider-pic"/>
+            { props.image ? <img src={props.image} alt="slider-pic"/> : null }
+            { props.video ? <ReactPlayer url={props.video} playing={props.isActive} /> : null }
         </div>
     )
 }
